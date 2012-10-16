@@ -123,12 +123,5 @@
     // (or reloaded from disk) later.
 }
 
-- (void)dealloc
-{
-    [navController release];
-    [window release];
-    
-    [super dealloc];
-}
 
 @end

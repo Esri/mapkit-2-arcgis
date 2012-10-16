@@ -82,24 +82,24 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 	BOOL okToPlaySound;
 }
 
-@property (nonatomic, retain) UIBarButtonItem *flipButton;
-@property (nonatomic, retain) UIBarButtonItem *doneButton;
+@property (nonatomic, strong) UIBarButtonItem *flipButton;
+@property (nonatomic, strong) UIBarButtonItem *doneButton;
 
-@property (nonatomic, retain) UIView *containerView;
-@property (nonatomic, retain) IBOutlet MKMapView *map;
+@property (nonatomic, strong) UIView *containerView;
+@property (nonatomic, strong) IBOutlet MKMapView *map;
 
-@property (nonatomic, retain) IBOutlet UIView *instructionsView;
+@property (nonatomic, strong) IBOutlet UIView *instructionsView;
 
-@property (nonatomic, retain) IBOutlet UISwitch *toggleBackgroundButton;
-@property (nonatomic, retain) IBOutlet UISwitch *toggleNavigationAccuracyButton;
-@property (nonatomic, retain) IBOutlet UISwitch *toggleAudioButton;
+@property (nonatomic, strong) IBOutlet UISwitch *toggleBackgroundButton;
+@property (nonatomic, strong) IBOutlet UISwitch *toggleNavigationAccuracyButton;
+@property (nonatomic, strong) IBOutlet UISwitch *toggleAudioButton;
 
-@property (nonatomic, retain) IBOutlet UISwitch *trackUserButton;
-@property (nonatomic, retain) IBOutlet UILabel *trackUserLabel;
+@property (nonatomic, strong) IBOutlet UISwitch *trackUserButton;
+@property (nonatomic, strong) IBOutlet UILabel *trackUserLabel;
 
-@property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
-@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 - (void)switchToBackgroundMode:(BOOL)background;
 - (IBAction)toggleBestAccuracy:(id)sender;

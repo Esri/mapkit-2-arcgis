@@ -86,7 +86,6 @@
 {
     free(points);
     pthread_rwlock_destroy(&rwLock);
-    [super dealloc];
 }
 
 - (CLLocationCoordinate2D)coordinate

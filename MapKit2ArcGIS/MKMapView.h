@@ -27,7 +27,7 @@ typedef struct {
 } MKCoordinateRegion;
 
 
-@interface MKMapView : AGSMapView <AGSLayerDelegate>
+@interface MKMapView : AGSMapView <AGSMapViewLayerDelegate>
 
 // Changing the map type or region can cause the map to start loading map content.
 // The loading delegate methods will be called as map content is loaded.

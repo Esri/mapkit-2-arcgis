@@ -90,7 +90,7 @@ static void interruptionListener(void *inClientData, UInt32 inInterruption);
     // We could normally use MKMapView's user location update delegation but this does not work in
     // the background.  Plus we want "kCLLocationAccuracyBestForNavigation" which gives us a better accuracy.
     //
-    self.locationManager = [[[CLLocationManager alloc] init] autorelease];
+    self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self; // Tells the location manager to send updates to this object
     
     // By default use the best accuracy setting (kCLLocationAccuracyBest)
@@ -160,29 +160,14 @@ static void interruptionListener(void *inClientData, UInt32 inInterruption);
 
 - (void)dealloc
 {
-    [crumbView release];
-    [crumbs release];
     
-    [containerView release];
-    [map release];
     
-    [flipButton release];
-    [doneButton release];
     
-    [trackUserButton release];
-    [trackUserLabel release];
     
     self.locationManager.delegate = nil;
-    [locationManager release];
     
-	[audioPlayer release];
 	
-	[instructionsView release];
-	[toggleBackgroundButton release];
-	[toggleNavigationAccuracyButton release];
-	[toggleAudioButton release];
 	
-    [super dealloc];
 }
 
 

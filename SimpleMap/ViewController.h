@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MapKit2ArcGIS.h"
+#import <MapKit/MapKit.h>
 
 @interface ViewController : UIViewController
 
