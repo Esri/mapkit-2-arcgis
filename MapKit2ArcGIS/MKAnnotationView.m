@@ -10,4 +10,25 @@
 
 @implementation MKAnnotationView
 
+- (id)initWithAnnotation:(id <MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier
+{
+    return self;
+}
+
+- (void)prepareForReuse
+{
+    
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    
+}
+
+
+- (void)setDragState:(MKAnnotationViewDragState)newDragState animated:(BOOL)animated
+{
+    
+}
+
 @end

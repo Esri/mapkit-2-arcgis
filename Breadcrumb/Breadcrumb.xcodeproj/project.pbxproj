@@ -85,6 +85,7 @@
 		88104A34162F19A700914A27 /* MKDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKDelegate.h; sourceTree = "<group>"; };
 		88104A36162F1A9200914A27 /* MKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAnnotationView.h; sourceTree = "<group>"; };
 		88104A37162F1A9200914A27 /* MKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAnnotationView.m; sourceTree = "<group>"; };
+		88104A39162F2C1400914A27 /* MKAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKAnnotation.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Breadcrumb-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Breadcrumb-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +225,7 @@
 				88104A34162F19A700914A27 /* MKDelegate.h */,
 				88104A36162F1A9200914A27 /* MKAnnotationView.h */,
 				88104A37162F1A9200914A27 /* MKAnnotationView.m */,
+				88104A39162F2C1400914A27 /* MKAnnotation.h */,
 			);
 			name = MapKit2ArcGIS;
 			path = ../MapKit2ArcGIS;

@@ -7,11 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MKAnnotation.h"
+//#import <MapKit/MapKit.h>
+
+
+enum {
+    MKAnnotationViewDragStateNone = 0,      // View is at rest, sitting on the map.
+    MKAnnotationViewDragStateStarting,      // View is beginning to drag (e.g. pin lift)
+    MKAnnotationViewDragStateDragging,      // View is dragging ("lift" animations are complete)
+    MKAnnotationViewDragStateCanceling,     // View was not dragged and should return to it's starting position (e.g. pin drop)
+    MKAnnotationViewDragStateEnding         // View was dragged, new coordinate is set and view should return to resting position (e.g. pin drop)
+};
+typedef NSUInteger MKAnnotationViewDragState;
 
 @interface MKAnnotationView : UIView
 {
 @private
-    MKAnnotationViewInternal *_internal;
+    //MKAnnotationViewInternal *_internal;
 }
 
 - (id)initWithAnnotation:(id <MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier;
