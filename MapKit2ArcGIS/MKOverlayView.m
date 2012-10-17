@@ -22,12 +22,14 @@
 // Convert screen points relative to this view to absolute MKMapPoints
 - (CGPoint)pointForMapPoint:(MKMapPoint)mapPoint
 {
+#warning not implemented
     CGPoint point;
     
     return point;
 }
 - (MKMapPoint)mapPointForPoint:(CGPoint)point
 {
+    #warning not implemented
     MKMapPoint mapPoint;
     
     return mapPoint;
@@ -35,12 +37,14 @@
 
 - (CGRect)rectForMapRect:(MKMapRect)mapRect
 {
+    #warning not implemented
     CGRect rect;
     
     return rect;
 }
 - (MKMapRect)mapRectForRect:(CGRect)rect
 {
+    #warning not implemented
     MKMapRect mapRec;
     return mapRec;
 }
@@ -54,25 +58,26 @@
 - (BOOL)canDrawMapRect:(MKMapRect)mapRect
              zoomScale:(MKZoomScale)zoomScale
 {
-    
+    #warning not implemented
+    return NO;
 }
 
 - (void)drawMapRect:(MKMapRect)mapRect
           zoomScale:(MKZoomScale)zoomScale
           inContext:(CGContextRef)context
 {
-    
+    #warning not implemented
 }
 
 - (void)setNeedsDisplayInMapRect:(MKMapRect)mapRect
 {
-    
+    #warning not implemented
 }
 
 - (void)setNeedsDisplayInMapRect:(MKMapRect)mapRect
                        zoomScale:(MKZoomScale)zoomScale
 {
-    
+    #warning not implemented
 }
 
 @end

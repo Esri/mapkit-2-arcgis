@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
+//#import <MapKit/MapKit.h>
 #import "MKMapView.h"
 #import "MKAnnotationView.h"
 #import "MKOverlay.h"
