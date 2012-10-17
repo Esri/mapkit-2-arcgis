@@ -1,9 +1,8 @@
 //
-//  MKAnnotationView.h
-//  Breadcrumb
+//  MKOverlay.h
+//  MapKit
 //
-//  Created by Al Pascual on 10/17/12.
-//
+//  Copyright (c) 2010-2012, Apple Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
