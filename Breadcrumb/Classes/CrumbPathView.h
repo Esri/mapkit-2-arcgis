@@ -48,7 +48,8 @@
  
  */
 
-#import <MapKit/MapKit.h>
+//#import <MapKit/MapKit.h>
+#import "MapKit2ArcGIS.h"
 
 @interface CrumbPathView : MKOverlayView
 {

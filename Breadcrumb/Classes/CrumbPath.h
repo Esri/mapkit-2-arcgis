@@ -45,7 +45,8 @@
  
  */
 
-#import <MapKit/MapKit.h>
+//#import <MapKit/MapKit.h>
+#import "MapKit2ArcGIS.h"
 #import <pthread.h>
 
 @interface CrumbPath : NSObject <MKOverlay>

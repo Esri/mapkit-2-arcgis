@@ -50,7 +50,8 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 */
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
+//#import <MapKit/MapKit.h>
+#import "MapKit2ArcGIS.h"
 #import <AVFoundation/AVFoundation.h>
 
 #import "CrumbPath.h"
