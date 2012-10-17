@@ -5,9 +5,9 @@
 //  Copyright (c) 2010-2012, Apple Inc. All rights reserved.
 //
 
-#import <MapKit/MKAnnotation.h>
-#import <MapKit/MKTypes.h>
-#import <MapKit/MKGeometry.h>
+#import "MKAnnotation.h"
+#import "MKTypes.h"
+#import "MKGeometry.h"
 
 @protocol MKOverlay <MKAnnotation>
 @required
