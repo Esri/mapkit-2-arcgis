@@ -8,23 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <ArcGIS/ArcGIS.h>
-
-enum {
-    MKMapTypeStandard = 0,
-    MKMapTypeSatellite,
-    MKMapTypeHybrid
-};
-typedef NSUInteger MKMapType;
-
-typedef struct {
-    CLLocationDegrees latitudeDelta;
-    CLLocationDegrees longitudeDelta;
-} MKCoordinateSpan;
-
-typedef struct {
-	CLLocationCoordinate2D center;
-	MKCoordinateSpan span;
-} MKCoordinateRegion;
+#import "MKTypes.h"
+#import "MKGeometry.h"
 
 
 @interface MKMapView : AGSMapView <AGSMapViewLayerDelegate>
