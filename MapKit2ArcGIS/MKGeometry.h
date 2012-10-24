@@ -7,7 +7,8 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 #import <CoreLocation/CoreLocation.h>
-
+#import "MKFoundation.h"
+//#import <MapKit/MapKit.h>
 
 
 typedef struct {
