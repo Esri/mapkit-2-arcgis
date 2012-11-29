@@ -23,6 +23,11 @@
     
 }
 
+- (void)setRegion:(MKCoordinateRegion)region animated:(BOOL)bAnimated
+{
+    [self setRegion:region];
+}
+
 
 - (void)mapViewDidLoad:(AGSMapView *)mapView
 {
@@ -34,4 +39,15 @@
     //[self zoomToGeometry:webMercatorPoint withPadding:0 animated:NO];
     [self zoomToResolution:22000 withCenterPoint:webMercatorPoint animated:NO];
 }
+
+- (void)setUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated
+{
+#warning not implemented
+}
+
+- (void)addOverlay:(id <MKOverlay>)overlay
+{
+    #warning not implemented
+}
+
 @end

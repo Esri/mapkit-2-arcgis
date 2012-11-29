@@ -42,6 +42,7 @@
 		88104A3D162F376400914A27 /* MKOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88104A3C162F376400914A27 /* MKOverlayView.m */; };
 		88104A40162F5E5800914A27 /* MKUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88104A3F162F5E5800914A27 /* MKUserLocation.m */; };
 		88104A4B1630814700914A27 /* MKGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 88104A4A1630814700914A27 /* MKGeometry.m */; };
+		88E353D41668218400869615 /* MKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E353D31668218300869615 /* MKOverlay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,8 @@
 		88104A491630814700914A27 /* MKGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKGeometry.h; sourceTree = "<group>"; };
 		88104A4A1630814700914A27 /* MKGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKGeometry.m; sourceTree = "<group>"; };
 		888FA645163865070080161B /* MKFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKFoundation.h; sourceTree = "<group>"; };
+		88E353CF1668203F00869615 /* MKUserTrackingMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKUserTrackingMode.h; sourceTree = "<group>"; };
+		88E353D31668218300869615 /* MKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlay.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Breadcrumb-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Breadcrumb-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +242,7 @@
 				88104A37162F1A9200914A27 /* MKAnnotationView.m */,
 				88104A39162F2C1400914A27 /* MKAnnotation.h */,
 				88104A3A162F2DC800914A27 /* MKOverlay.h */,
+				88E353D31668218300869615 /* MKOverlay.m */,
 				88104A3B162F376400914A27 /* MKOverlayView.h */,
 				88104A3C162F376400914A27 /* MKOverlayView.m */,
 				88104A3E162F5E5800914A27 /* MKUserLocation.h */,
@@ -247,6 +251,7 @@
 				88104A491630814700914A27 /* MKGeometry.h */,
 				88104A4A1630814700914A27 /* MKGeometry.m */,
 				888FA645163865070080161B /* MKFoundation.h */,
+				88E353CF1668203F00869615 /* MKUserTrackingMode.h */,
 			);
 			name = MapKit2ArcGIS;
 			path = ../MapKit2ArcGIS;
@@ -336,6 +341,7 @@
 				88104A3D162F376400914A27 /* MKOverlayView.m in Sources */,
 				88104A40162F5E5800914A27 /* MKUserLocation.m in Sources */,
 				88104A4B1630814700914A27 /* MKGeometry.m in Sources */,
+				88E353D41668218400869615 /* MKOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "MKDelegate.h"
 #import "MKAnnotationView.h"
 //#import "MKOverlayView.h"
+#import "MKUserTrackingMode.h"
 
 
 
