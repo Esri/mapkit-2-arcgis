@@ -22,6 +22,10 @@
 @property (nonatomic) MKCoordinateRegion savedRegion;
 @property (nonatomic) MKUserTrackingMode userTrackingMode NS_AVAILABLE(NA, 5_0);
 
+// Access the visible region of the map in projected coordinates.
+@property (nonatomic) MKMapRect visibleMapRect;
+- (void)setVisibleMapRect:(MKMapRect)mapRect animated:(BOOL)animate;
+
 - (void)setRegion:(MKCoordinateRegion)region;
 - (void)setRegion:(MKCoordinateRegion)region animated:(BOOL)bAnimated;
 - (void)setUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated NS_AVAILABLE(NA, 5_0);

@@ -10,6 +10,12 @@
 
 @implementation MKOverlayView
 
+
+- (id)initWithOverlay:(id <MKOverlay>)overlay;
+{
+    #warning not implemented
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
