@@ -13,7 +13,11 @@
 
 - (id)initWithOverlay:(id <MKOverlay>)overlay;
 {
-    #warning not implemented
+    self = [super init];
+    if (self) {
+        // Initialization code
+    }
+    return self;
 }
 
 - (id)initWithFrame:(CGRect)frame

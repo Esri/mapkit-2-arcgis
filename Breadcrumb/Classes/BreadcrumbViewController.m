@@ -321,14 +321,15 @@ static void interruptionListener(void *inClientData, UInt32 inInterruption);
     }
 }
 
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
-{
-    if (!crumbView)
-    {
-        crumbView = [[CrumbPathView alloc] initWithOverlay:overlay];
-    }
-    return crumbView;
-}
+#warning TODO
+//- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+//{
+//    if (!crumbView)
+//    {
+//        crumbView = [[CrumbPathView alloc] initWithOverlay:overlay];
+//    }
+//    return crumbView;
+//}
 
 
 #pragma mark -

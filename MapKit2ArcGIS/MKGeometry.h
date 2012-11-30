@@ -67,21 +67,34 @@ typedef struct {
 typedef CGFloat MKZoomScale;
 #endif
 
-MK_EXTERN const MKMapSize MKMapSizeWorld NS_AVAILABLE(NA, 4_0);
+const MKMapSize MKMapSizeWorld NS_AVAILABLE(NA, 4_0);
 // The rect that contains every map point in the world.
-MK_EXTERN const MKMapRect MKMapRectWorld NS_AVAILABLE(NA, 4_0);
+const MKMapRect MKMapRectWorld NS_AVAILABLE(NA, 4_0);
 
 // Conversion between unprojected and projected coordinates
-MK_EXTERN MKMapPoint MKMapPointForCoordinate(CLLocationCoordinate2D coordinate) NS_AVAILABLE(NA, 4_0);
-MK_EXTERN CLLocationCoordinate2D MKCoordinateForMapPoint(MKMapPoint mapPoint) NS_AVAILABLE(NA, 4_0);
+NS_INLINE MKMapPoint MKMapPointForCoordinate(CLLocationCoordinate2D coordinate)
+{
+#warning convert to AGSPoint
+    return (MKMapPoint) { coordinate.latitude, coordinate.longitude };
+}
+
+NS_INLINE CLLocationCoordinate2D MKCoordinateForMapPoint(MKMapPoint mapPoint)
+{
+    #warning convert to AGSPoint
+    CLLocationCoordinate2D location;
+    location.latitude = mapPoint.x;
+    location.longitude = mapPoint.y;
+    
+    return location;
+}
 
 // Conversion between distances and projected coordinates
-MK_EXTERN CLLocationDistance MKMetersPerMapPointAtLatitude(CLLocationDegrees latitude) NS_AVAILABLE(NA, 4_0);
-MK_EXTERN double MKMapPointsPerMeterAtLatitude(CLLocationDegrees latitude) NS_AVAILABLE(NA, 4_0);
+CLLocationDistance MKMetersPerMapPointAtLatitude(CLLocationDegrees latitude) NS_AVAILABLE(NA, 4_0);
+double MKMapPointsPerMeterAtLatitude(CLLocationDegrees latitude) NS_AVAILABLE(NA, 4_0);
 
-MK_EXTERN CLLocationDistance MKMetersBetweenMapPoints(MKMapPoint a, MKMapPoint b) NS_AVAILABLE(NA, 4_0);
+CLLocationDistance MKMetersBetweenMapPoints(MKMapPoint a, MKMapPoint b) NS_AVAILABLE(NA, 4_0);
 
-MK_EXTERN const MKMapRect MKMapRectNull NS_AVAILABLE(NA, 4_0);
+const MKMapRect MKMapRectNull NS_AVAILABLE(NA, 4_0);
 
 #if (__IPHONE_4_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED)
 

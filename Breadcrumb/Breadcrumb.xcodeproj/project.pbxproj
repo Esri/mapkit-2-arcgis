@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A3C7170118F4E0600EE06ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3C716F118F4E0600EE06ED /* MapKit.framework */; };
 		1A3C7176118F4E0A00EE06ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3C7175118F4E0A00EE06ED /* CoreLocation.framework */; };
 		1A3C719D118F4EEC00EE06ED /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C719C118F4EEC00EE06ED /* CrumbPath.m */; };
 		1A3C71A7118F65C400EE06ED /* CrumbPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C71A6118F65C400EE06ED /* CrumbPathView.m */; };
@@ -119,7 +118,6 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
-				1A3C7170118F4E0600EE06ED /* MapKit.framework in Frameworks */,
 				1A3C7176118F4E0A00EE06ED /* CoreLocation.framework in Frameworks */,
 				53DEB89F1249591200860C26 /* AVFoundation.framework in Frameworks */,
 				53DEB8A71249592A00860C26 /* AudioToolbox.framework in Frameworks */,
