@@ -19,6 +19,9 @@
 		536EE47A10B358610080A190 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 536EE47910B358610080A190 /* MapViewController.m */; };
 		537DA6BA1108F80B0045D54C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537DA6B91108F80B0045D54C /* DetailViewController.m */; };
 		537DA6BE1108F8460045D54C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 537DA6BC1108F8460045D54C /* DetailViewController.xib */; };
+		6BA7F37F167B129D00008C80 /* MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6AD16793F980014CA6F /* MKAnnotationView.m */; };
+		6BA7F380167B129D00008C80 /* MKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6B916793F980014CA6F /* MKPinAnnotationView.m */; };
+		6BDC8248167B1C7500DDC0C0 /* GreenPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC8247167B1C7500DDC0C0 /* GreenPin.png */; };
 		CB6C7CB111D53FDA00AC7FA8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA511D53FDA00AC7FA8 /* Default.png */; };
 		CB6C7CB211D53FDA00AC7FA8 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA611D53FDA00AC7FA8 /* flag.png */; };
 		CB6C7CB311D53FDA00AC7FA8 /* GoldenGate.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA711D53FDA00AC7FA8 /* GoldenGate.png */; };
@@ -32,13 +35,11 @@
 		CB6C7CBC11D53FDA00AC7FA8 /* SFIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CB011D53FDA00AC7FA8 /* SFIcon.png */; };
 		CB6C7CBE11D5400200AC7FA8 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CBD11D5400200AC7FA8 /* iTunesArtwork */; };
 		CB8F294A11D176F900E84C56 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB8F294911D176F900E84C56 /* ReadMe.txt */; };
-		E249E57F167BA61000447A7B /* MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E249E56E167BA61000447A7B /* MKAnnotationView.m */; };
-		E249E580167BA61000447A7B /* MKGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = E249E572167BA61000447A7B /* MKGeometry.m */; };
-		E249E581167BA61000447A7B /* MKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E249E574167BA61000447A7B /* MKMapView.m */; };
-		E249E582167BA61000447A7B /* MKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E249E576167BA61000447A7B /* MKOverlay.m */; };
-		E249E583167BA61000447A7B /* MKOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E249E578167BA61000447A7B /* MKOverlayView.m */; };
-		E249E584167BA61000447A7B /* MKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E249E57A167BA61000447A7B /* MKPinAnnotationView.m */; };
-		E249E585167BA61000447A7B /* MKUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E249E57D167BA61000447A7B /* MKUserLocation.m */; };
+		E2AEC6BF16793F980014CA6F /* MKGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6B116793F980014CA6F /* MKGeometry.m */; };
+		E2AEC6C016793F980014CA6F /* MKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6B316793F980014CA6F /* MKMapView.m */; };
+		E2AEC6C116793F980014CA6F /* MKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6B516793F980014CA6F /* MKOverlay.m */; };
+		E2AEC6C216793F980014CA6F /* MKOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6B716793F980014CA6F /* MKOverlayView.m */; };
+		E2AEC6C416793F980014CA6F /* MKUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6BC16793F980014CA6F /* MKUserLocation.m */; };
 		E2AEC6CD16793FBB0014CA6F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AEC6C516793FBB0014CA6F /* Security.framework */; };
 		E2AEC6CE16793FBB0014CA6F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AEC6C616793FBB0014CA6F /* libz.dylib */; };
 		E2AEC6CF16793FBB0014CA6F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AEC6C716793FBB0014CA6F /* MobileCoreServices.framework */; };
@@ -72,6 +73,7 @@
 		537DA6B81108F80B0045D54C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		537DA6B91108F80B0045D54C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		537DA6BD1108F8460045D54C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		6BDC8247167B1C7500DDC0C0 /* GreenPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenPin.png; sourceTree = "<group>"; };
 		CB6C7CA511D53FDA00AC7FA8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CB6C7CA611D53FDA00AC7FA8 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
 		CB6C7CA711D53FDA00AC7FA8 /* GoldenGate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoldenGate.png; sourceTree = "<group>"; };
@@ -85,26 +87,25 @@
 		CB6C7CB011D53FDA00AC7FA8 /* SFIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SFIcon.png; sourceTree = "<group>"; };
 		CB6C7CBD11D5400200AC7FA8 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = ../iTunesArtwork; sourceTree = "<group>"; };
 		CB8F294911D176F900E84C56 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		E249E56B167BA61000447A7B /* MapKit2ArcGIS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapKit2ArcGIS.h; sourceTree = "<group>"; };
-		E249E56C167BA61000447A7B /* MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAnnotation.h; sourceTree = "<group>"; };
-		E249E56D167BA61000447A7B /* MKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAnnotationView.h; sourceTree = "<group>"; };
-		E249E56E167BA61000447A7B /* MKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAnnotationView.m; sourceTree = "<group>"; };
-		E249E56F167BA61000447A7B /* MKDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDelegate.h; sourceTree = "<group>"; };
-		E249E570167BA61000447A7B /* MKFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFoundation.h; sourceTree = "<group>"; };
-		E249E571167BA61000447A7B /* MKGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKGeometry.h; sourceTree = "<group>"; };
-		E249E572167BA61000447A7B /* MKGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKGeometry.m; sourceTree = "<group>"; };
-		E249E573167BA61000447A7B /* MKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
-		E249E574167BA61000447A7B /* MKMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapView.m; sourceTree = "<group>"; };
-		E249E575167BA61000447A7B /* MKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlay.h; sourceTree = "<group>"; };
-		E249E576167BA61000447A7B /* MKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlay.m; sourceTree = "<group>"; };
-		E249E577167BA61000447A7B /* MKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlayView.h; sourceTree = "<group>"; };
-		E249E578167BA61000447A7B /* MKOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlayView.m; sourceTree = "<group>"; };
-		E249E579167BA61000447A7B /* MKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPinAnnotationView.h; sourceTree = "<group>"; };
-		E249E57A167BA61000447A7B /* MKPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPinAnnotationView.m; sourceTree = "<group>"; };
-		E249E57B167BA61000447A7B /* MKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTypes.h; sourceTree = "<group>"; };
-		E249E57C167BA61000447A7B /* MKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUserLocation.h; sourceTree = "<group>"; };
-		E249E57D167BA61000447A7B /* MKUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUserLocation.m; sourceTree = "<group>"; };
-		E249E57E167BA61000447A7B /* MKUserTrackingMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUserTrackingMode.h; sourceTree = "<group>"; };
+		E2AEC6AA16793F980014CA6F /* MapKit2ArcGIS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapKit2ArcGIS.h; sourceTree = "<group>"; };
+		E2AEC6AB16793F980014CA6F /* MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAnnotation.h; sourceTree = "<group>"; };
+		E2AEC6AC16793F980014CA6F /* MKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAnnotationView.h; sourceTree = "<group>"; };
+		E2AEC6AD16793F980014CA6F /* MKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAnnotationView.m; sourceTree = "<group>"; };
+		E2AEC6AF16793F980014CA6F /* MKFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFoundation.h; sourceTree = "<group>"; };
+		E2AEC6B016793F980014CA6F /* MKGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKGeometry.h; sourceTree = "<group>"; };
+		E2AEC6B116793F980014CA6F /* MKGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKGeometry.m; sourceTree = "<group>"; };
+		E2AEC6B216793F980014CA6F /* MKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
+		E2AEC6B316793F980014CA6F /* MKMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapView.m; sourceTree = "<group>"; };
+		E2AEC6B416793F980014CA6F /* MKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlay.h; sourceTree = "<group>"; };
+		E2AEC6B516793F980014CA6F /* MKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlay.m; sourceTree = "<group>"; };
+		E2AEC6B616793F980014CA6F /* MKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlayView.h; sourceTree = "<group>"; };
+		E2AEC6B716793F980014CA6F /* MKOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlayView.m; sourceTree = "<group>"; };
+		E2AEC6B816793F980014CA6F /* MKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPinAnnotationView.h; sourceTree = "<group>"; };
+		E2AEC6B916793F980014CA6F /* MKPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPinAnnotationView.m; sourceTree = "<group>"; };
+		E2AEC6BA16793F980014CA6F /* MKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTypes.h; sourceTree = "<group>"; };
+		E2AEC6BB16793F980014CA6F /* MKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUserLocation.h; sourceTree = "<group>"; };
+		E2AEC6BC16793F980014CA6F /* MKUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUserLocation.m; sourceTree = "<group>"; };
+		E2AEC6BD16793F980014CA6F /* MKUserTrackingMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUserTrackingMode.h; sourceTree = "<group>"; };
 		E2AEC6C516793FBB0014CA6F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E2AEC6C616793FBB0014CA6F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E2AEC6C716793FBB0014CA6F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -148,7 +149,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				E249E56A167BA61000447A7B /* MapKit2ArcGIS */,
+				E2AEC6A916793F980014CA6F /* MapKit2ArcGIS */,
 				CB8F294911D176F900E84C56 /* ReadMe.txt */,
 				CB6C7CA311D53FA900AC7FA8 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -222,6 +223,7 @@
 			children = (
 				CB6C7CBD11D5400200AC7FA8 /* iTunesArtwork */,
 				CB6C7CA511D53FDA00AC7FA8 /* Default.png */,
+				6BDC8247167B1C7500DDC0C0 /* GreenPin.png */,
 				CB6C7CA611D53FDA00AC7FA8 /* flag.png */,
 				CB6C7CA711D53FDA00AC7FA8 /* GoldenGate.png */,
 				CB6C7CA811D53FDA00AC7FA8 /* Icon-72.png */,
@@ -236,29 +238,28 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		E249E56A167BA61000447A7B /* MapKit2ArcGIS */ = {
+		E2AEC6A916793F980014CA6F /* MapKit2ArcGIS */ = {
 			isa = PBXGroup;
 			children = (
-				E249E56B167BA61000447A7B /* MapKit2ArcGIS.h */,
-				E249E56C167BA61000447A7B /* MKAnnotation.h */,
-				E249E56D167BA61000447A7B /* MKAnnotationView.h */,
-				E249E56E167BA61000447A7B /* MKAnnotationView.m */,
-				E249E56F167BA61000447A7B /* MKDelegate.h */,
-				E249E570167BA61000447A7B /* MKFoundation.h */,
-				E249E571167BA61000447A7B /* MKGeometry.h */,
-				E249E572167BA61000447A7B /* MKGeometry.m */,
-				E249E573167BA61000447A7B /* MKMapView.h */,
-				E249E574167BA61000447A7B /* MKMapView.m */,
-				E249E575167BA61000447A7B /* MKOverlay.h */,
-				E249E576167BA61000447A7B /* MKOverlay.m */,
-				E249E577167BA61000447A7B /* MKOverlayView.h */,
-				E249E578167BA61000447A7B /* MKOverlayView.m */,
-				E249E579167BA61000447A7B /* MKPinAnnotationView.h */,
-				E249E57A167BA61000447A7B /* MKPinAnnotationView.m */,
-				E249E57B167BA61000447A7B /* MKTypes.h */,
-				E249E57C167BA61000447A7B /* MKUserLocation.h */,
-				E249E57D167BA61000447A7B /* MKUserLocation.m */,
-				E249E57E167BA61000447A7B /* MKUserTrackingMode.h */,
+				E2AEC6AA16793F980014CA6F /* MapKit2ArcGIS.h */,
+				E2AEC6AB16793F980014CA6F /* MKAnnotation.h */,
+				E2AEC6AC16793F980014CA6F /* MKAnnotationView.h */,
+				E2AEC6AD16793F980014CA6F /* MKAnnotationView.m */,
+				E2AEC6AF16793F980014CA6F /* MKFoundation.h */,
+				E2AEC6B016793F980014CA6F /* MKGeometry.h */,
+				E2AEC6B116793F980014CA6F /* MKGeometry.m */,
+				E2AEC6B216793F980014CA6F /* MKMapView.h */,
+				E2AEC6B316793F980014CA6F /* MKMapView.m */,
+				E2AEC6B416793F980014CA6F /* MKOverlay.h */,
+				E2AEC6B516793F980014CA6F /* MKOverlay.m */,
+				E2AEC6B616793F980014CA6F /* MKOverlayView.h */,
+				E2AEC6B716793F980014CA6F /* MKOverlayView.m */,
+				E2AEC6B816793F980014CA6F /* MKPinAnnotationView.h */,
+				E2AEC6B916793F980014CA6F /* MKPinAnnotationView.m */,
+				E2AEC6BA16793F980014CA6F /* MKTypes.h */,
+				E2AEC6BB16793F980014CA6F /* MKUserLocation.h */,
+				E2AEC6BC16793F980014CA6F /* MKUserLocation.m */,
+				E2AEC6BD16793F980014CA6F /* MKUserTrackingMode.h */,
 			);
 			name = MapKit2ArcGIS;
 			path = ../MapKit2ArcGIS;
@@ -330,6 +331,7 @@
 				CB6C7CBB11D53FDA00AC7FA8 /* Location.png in Resources */,
 				CB6C7CBC11D53FDA00AC7FA8 /* SFIcon.png in Resources */,
 				CB6C7CBE11D5400200AC7FA8 /* iTunesArtwork in Resources */,
+				6BDC8248167B1C7500DDC0C0 /* GreenPin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,19 +342,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA7F37F167B129D00008C80 /* MKAnnotationView.m in Sources */,
+				6BA7F380167B129D00008C80 /* MKPinAnnotationView.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				5321F1870F7AE57A00EC9E3A /* AppDelegate.m in Sources */,
 				533D375B10B329010057E53B /* SFAnnotation.m in Sources */,
 				536EE47A10B358610080A190 /* MapViewController.m in Sources */,
 				534BB35210B4A47500C8BE22 /* BridgeAnnotation.m in Sources */,
 				537DA6BA1108F80B0045D54C /* DetailViewController.m in Sources */,
-				E249E57F167BA61000447A7B /* MKAnnotationView.m in Sources */,
-				E249E580167BA61000447A7B /* MKGeometry.m in Sources */,
-				E249E581167BA61000447A7B /* MKMapView.m in Sources */,
-				E249E582167BA61000447A7B /* MKOverlay.m in Sources */,
-				E249E583167BA61000447A7B /* MKOverlayView.m in Sources */,
-				E249E584167BA61000447A7B /* MKPinAnnotationView.m in Sources */,
-				E249E585167BA61000447A7B /* MKUserLocation.m in Sources */,
+				E2AEC6BF16793F980014CA6F /* MKGeometry.m in Sources */,
+				E2AEC6C016793F980014CA6F /* MKMapView.m in Sources */,
+				E2AEC6C116793F980014CA6F /* MKOverlay.m in Sources */,
+				E2AEC6C216793F980014CA6F /* MKOverlayView.m in Sources */,
+				E2AEC6C416793F980014CA6F /* MKUserLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

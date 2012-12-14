@@ -20,7 +20,7 @@
 @protocol MKMapViewDelegate;
 
 
-@interface MKMapView : AGSMapView <AGSMapViewLayerDelegate>
+@interface MKMapView : AGSMapView <AGSMapViewLayerDelegate, MKAnnotation, AGSMapViewCalloutDelegate>
 {
     BOOL shouldAnimate;
 }

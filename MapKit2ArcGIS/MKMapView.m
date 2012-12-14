@@ -15,7 +15,7 @@
     self.layerDelegate = self;
     self.savedRegion = region;
     
-    NSLog(@"Set Region");
+
     NSURL* url;
     switch (self.mapType)
     {
@@ -46,6 +46,8 @@
 {
     self.idtoannotationDictionary = [[NSMutableDictionary alloc] init];
     self.annotationGraphicsLayer = [AGSGraphicsLayer graphicsLayer];
+    [self addMapLayer:self.annotationGraphicsLayer withName:@"Annotation Graphics Layer"];
+    
     AGSPoint *wgs84Point = [[AGSPoint alloc] initWithX:self.savedRegion.center.longitude y:self.savedRegion.center.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
     
     AGSGeometryEngine *engine = [AGSGeometryEngine defaultGeometryEngine];
@@ -66,25 +68,41 @@
 - (void)removeAnnotation:(id <MKAnnotation>)annotation
 {
     [self.mapannotations removeObject:annotation];
+    [self.annotationGraphicsLayer removeAllGraphics];
 }
 
 - (void)removeAnnotations:(NSArray *)annotations
 {
     [self.mapannotations removeAllObjects];
+    [self.annotationGraphicsLayer removeAllGraphics];
 }
 
 - (void)addAnnotation:(id <MKAnnotation>)annotation
 {
     [self.mapannotations addObject:annotation];
    MKAnnotationView* annotationView =  [self.delegate mapView:self viewForAnnotation:annotation];
-    MKPinAnnotationView* pinAnnotationView = (MKPinAnnotationView*) annotationView;
-    NSLog(@"reuse ID is %@", annotationView.reuseID);
-    // Create the NSDictionary with identifier and annotationView
-    if ( ! [self.idtoannotationDictionary objectForKey:annotationView.reuseID])
+   MKPinAnnotationView* pinAnnotationView = (MKPinAnnotationView*) annotationView;
+   // Create the NSDictionary with identifier and annotationView
+   if ( ! [self.idtoannotationDictionary objectForKey:annotationView.reuseID])
         [self.idtoannotationDictionary setObject:annotationView forKey:annotationView.reuseID];
     
-    // add a new graphic based on the type
+   // add a new graphic based on the type
+   AGSPictureMarkerSymbol* pictureMarkerSymbol;
+   if ( pinAnnotationView.image)
+   {
+       pictureMarkerSymbol  = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImage:pinAnnotationView.image];
+   }
+   else
+   {
+       pictureMarkerSymbol  = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImageNamed:@"GreenPin.png"];
+   }
     
+   AGSPoint* markerPoint = [AGSPoint pointWithX:annotation.coordinate.longitude y:annotation.coordinate.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
+    
+   AGSPoint* newMarkerPoint = [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:self.spatialReference];
+   AGSGraphic* myGraphic = [AGSGraphic graphicWithGeometry:newMarkerPoint symbol:pictureMarkerSymbol attributes:nil infoTemplateDelegate:nil];
+   [self.annotationGraphicsLayer addGraphic:myGraphic];
+   [self.annotationGraphicsLayer dataChanged];
     
 }
 
@@ -93,7 +111,7 @@
     [self.mapannotations addObjectsFromArray:annotations];
     for ( id<MKAnnotation> annotation in annotations)
     {
-        [self.delegate mapView:self viewForAnnotation:annotation];
+        [self addAnnotation:annotation];
     }
 }
 
@@ -101,15 +119,9 @@
 {
     // return the graphics view if the layer exists else return NULL
    if ( [self.idtoannotationDictionary objectForKey:identifier])
-   {
        return [self.idtoannotationDictionary objectForKey:identifier];
-   }
-    
-    else
-    {
-        NSLog(@"Graphics doesnt exist");
+   else
         return NULL;
-    }
 }
 
 - (void)setUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated
