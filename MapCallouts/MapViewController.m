@@ -94,6 +94,8 @@ enum
 {
     self.mapView.mapType = MKMapTypeStandard;   // also MKMapTypeSatellite or MKMapTypeHybrid
 
+    self.mapView.delegate = self;
+    
     // create a custom navigation bar button and set it to always says "Back"
 	UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
 	temporaryBarButtonItem.title = @"Back";
@@ -103,11 +105,12 @@ enum
     // create out annotations array (in this example only 2)
     self.mapAnnotations = [[NSMutableArray alloc] initWithCapacity:2];
     
+    
     // annotation for the City of San Francisco
     SFAnnotation *sfAnnotation = [[SFAnnotation alloc] init];
     [self.mapAnnotations insertObject:sfAnnotation atIndex:kCityAnnotationIndex];
     [sfAnnotation release];
-    
+   
     // annotation for Golden Gate Bridge
     BridgeAnnotation *bridgeAnnotation = [[BridgeAnnotation alloc] init];
     [self.mapAnnotations insertObject:bridgeAnnotation atIndex:kBridgeAnnotationIndex];
@@ -174,6 +177,8 @@ enum
 
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
+    
+    
     // if it's the user location, just return nil.
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;

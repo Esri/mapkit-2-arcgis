@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 
 #import "MKMapView.h"
-#import "MKDelegate.h"
+//#import "MKDelegate.h"
+#import "MKAnnotation.h"
 #import "MKAnnotationView.h"
 //#import "MKOverlayView.h"
 #import "MKUserTrackingMode.h"
+#import "MKPinAnnotationView.h"
+#import "MKUserLocation.h"
 
 
 

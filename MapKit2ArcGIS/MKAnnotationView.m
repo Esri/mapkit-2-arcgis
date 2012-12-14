@@ -12,6 +12,8 @@
 
 - (id)initWithAnnotation:(id <MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier
 {
+    self.annotation = annotation;
+    self.reuseID = reuseIdentifier;
     return self;
 }
 

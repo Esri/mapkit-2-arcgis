@@ -46,11 +46,12 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
+//#import <MapKit/MapKit.h>
+#import "MapKit2ArcGIS.h"
 
 @class DetailViewController;
 
-@interface MapViewController : UIViewController <MKMapViewDelegate>
+@interface MapViewController : UIViewController  <MKMapViewDelegate>
 {
     MKMapView *mapView;
     DetailViewController *detailViewController;

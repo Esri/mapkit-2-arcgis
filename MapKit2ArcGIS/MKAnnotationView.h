@@ -33,6 +33,7 @@ typedef NSUInteger MKAnnotationViewDragState;
 - (void)prepareForReuse;
 
 @property (nonatomic, retain) id <MKAnnotation> annotation;
+@property ( nonatomic, retain) NSString* reuseID;
 
 @property (nonatomic, retain) UIImage *image;
 
