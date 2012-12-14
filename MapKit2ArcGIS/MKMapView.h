@@ -15,6 +15,7 @@
 #import "MKAnnotation.h"
 #import "MKAnnotationView.h"
 #import "MKPinAnnotationView.h"
+#import "AnnotationTemplate.h"
 
 
 @protocol MKMapViewDelegate;

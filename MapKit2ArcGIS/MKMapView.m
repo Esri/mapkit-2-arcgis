@@ -94,13 +94,30 @@
    }
    else
    {
-       pictureMarkerSymbol  = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImageNamed:@"GreenPin.png"];
+       pictureMarkerSymbol  = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImageNamed:@"BlueStickpin.png"];
    }
     
    AGSPoint* markerPoint = [AGSPoint pointWithX:annotation.coordinate.longitude y:annotation.coordinate.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
     
    AGSPoint* newMarkerPoint = [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:self.spatialReference];
    AGSGraphic* myGraphic = [AGSGraphic graphicWithGeometry:newMarkerPoint symbol:pictureMarkerSymbol attributes:nil infoTemplateDelegate:nil];
+    
+    AnnotationTemplate* template = [[AnnotationTemplate alloc] init];
+    template.title = annotation.title;
+    template.subtitle = annotation.subtitle;
+    if ( pinAnnotationView.leftCalloutAccessoryView)
+    {
+        template.leftView =  [[UIView alloc] initWithFrame:pinAnnotationView.leftCalloutAccessoryView.frame];
+        template.leftView = pinAnnotationView.leftCalloutAccessoryView;
+        //template.image = imageView.image;
+    }
+    
+    if ( pinAnnotationView.rightCalloutAccessoryView)
+    {
+        template.rightView = pinAnnotationView.rightCalloutAccessoryView;
+    }
+    
+   myGraphic.infoTemplateDelegate = template;
    [self.annotationGraphicsLayer addGraphic:myGraphic];
    [self.annotationGraphicsLayer dataChanged];
     
