@@ -50,8 +50,8 @@
 		E2AEC6D316793FBB0014CA6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AEC6CB16793FBB0014CA6F /* QuartzCore.framework */; };
 		E2AEC6D416793FBB0014CA6F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AEC6CC16793FBB0014CA6F /* CoreLocation.framework */; };
 		E2CE21E5167BE2E1000EB508 /* BlueStickpin.png in Resources */ = {isa = PBXBuildFile; fileRef = E2CE21E4167BE2E1000EB508 /* BlueStickpin.png */; };
-		E2CE21E7167BE500000EB508 /* MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6AD16793F980014CA6F /* MKAnnotationView.m */; };
-		E2CE21E8167BE500000EB508 /* MKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6B916793F980014CA6F /* MKPinAnnotationView.m */; };
+		E2CE21F3167BEAA2000EB508 /* MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6AD16793F980014CA6F /* MKAnnotationView.m */; };
+		E2CE21F4167BEAA2000EB508 /* MKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6B916793F980014CA6F /* MKPinAnnotationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,8 +360,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2CE21E7167BE500000EB508 /* MKAnnotationView.m in Sources */,
-				E2CE21E8167BE500000EB508 /* MKPinAnnotationView.m in Sources */,
+				E2CE21F3167BEAA2000EB508 /* MKAnnotationView.m in Sources */,
+				E2CE21F4167BEAA2000EB508 /* MKPinAnnotationView.m in Sources */,
 				E21FE517167BC2FE00A66463 /* AnnotationTemplate.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				5321F1870F7AE57A00EC9E3A /* AppDelegate.m in Sources */,
