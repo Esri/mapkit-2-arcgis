@@ -16,6 +16,7 @@
 #import "MKUserTrackingMode.h"
 #import "MKPinAnnotationView.h"
 #import "MKUserLocation.h"
+#import "MKPlaceMark.h"
 
 
 

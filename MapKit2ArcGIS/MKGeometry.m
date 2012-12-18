@@ -8,6 +8,6 @@
 
 #import "MKGeometry.h"
 
-@implementation NSValue (NSValueMapKitGeometryExtensions)
+//@implementation NSValue (NSValueMapKitGeometryExtensions)
 
-@end
+//@end

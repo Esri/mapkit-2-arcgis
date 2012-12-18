@@ -92,7 +92,7 @@ enum
 
 - (void)viewDidLoad
 {
-    self.mapView.mapType = MKMapTypeStandard;   // also MKMapTypeSatellite or MKMapTypeHybrid
+    self.mapView.mapType = MKMapTypeSatellite;   // also MKMapTypeSatellite or MKMapTypeHybrid
 
     self.mapView.delegate = self;
     

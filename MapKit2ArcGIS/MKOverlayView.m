@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         // Initialization code
+        _overlay = overlay;
     }
     return self;
 }
@@ -32,31 +33,22 @@
 // Convert screen points relative to this view to absolute MKMapPoints
 - (CGPoint)pointForMapPoint:(MKMapPoint)mapPoint
 {
-#warning not implemented
-    CGPoint point;
-    
-    return point;
+//#warning not implemented
+    return [self.delegate pointForMapPoint:mapPoint];
 }
 - (MKMapPoint)mapPointForPoint:(CGPoint)point
 {
-    #warning not implemented
-    MKMapPoint mapPoint;
     
-    return mapPoint;
+    return [self.delegate mapPointForPoint:point];
 }
 
 - (CGRect)rectForMapRect:(MKMapRect)mapRect
 {
-    #warning not implemented
-    CGRect rect;
-    
-    return rect;
+    return [self.delegate rectForMapRect:mapRect];
 }
 - (MKMapRect)mapRectForRect:(CGRect)rect
 {
-    #warning not implemented
-    MKMapRect mapRec;
-    return mapRec;
+    return [self.delegate mapRectForRect:rect];
 }
 
 // Return YES if the view is currently ready to draw in the specified rect.
@@ -68,7 +60,7 @@
 - (BOOL)canDrawMapRect:(MKMapRect)mapRect
              zoomScale:(MKZoomScale)zoomScale
 {
-    #warning not implemented
+    //#warning not implemented
     return NO;
 }
 
@@ -76,18 +68,20 @@
           zoomScale:(MKZoomScale)zoomScale
           inContext:(CGContextRef)context
 {
-    #warning not implemented
+//    #warning not implemented
+    CGRect boundaryRect =[self rectForMapRect:mapRect];
+    CGContextFillRect(context, boundaryRect);
 }
 
 - (void)setNeedsDisplayInMapRect:(MKMapRect)mapRect
 {
-    #warning not implemented
+    //#warning not implemented
 }
 
 - (void)setNeedsDisplayInMapRect:(MKMapRect)mapRect
                        zoomScale:(MKZoomScale)zoomScale
 {
-    #warning not implemented
+   // #warning not implemented
 }
 
 @end

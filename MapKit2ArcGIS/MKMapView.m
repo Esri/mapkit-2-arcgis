@@ -16,7 +16,7 @@
 {
     self.layerDelegate = self;
     self.savedRegion = region;
-    
+     self.wgs84Point = [[AGSPoint alloc] initWithX:self.savedRegion.center.longitude y:self.savedRegion.center.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
 
     NSURL* url;
     switch (self.mapType)
@@ -43,6 +43,27 @@
     [self setRegion:region];
 }
 
+-(void) setVisibleMapRect:(MKMapRect)visibleMapRect
+{
+   self.wgs84Point = [[AGSPoint alloc] initWithX:visibleMapRect.origin.x y:visibleMapRect.origin.y spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
+    NSURL* url;
+    switch (self.mapType)
+    {
+        case 0:
+            url = [NSURL URLWithString: @"http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"];
+            break;
+        case 1 :
+            url = [NSURL URLWithString: @"http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"];
+            break;
+        default:
+            break;
+    }
+    
+    AGSTiledMapServiceLayer* layer = [AGSTiledMapServiceLayer tiledMapServiceLayerWithURL: url];
+    [self addMapLayer:layer withName:@"basemap"];
+}
+
+
 
 - (void)mapViewDidLoad:(AGSMapView *)mapView
 {
@@ -50,16 +71,20 @@
     self.annotationGraphicsLayer = [AGSGraphicsLayer graphicsLayer];
     [self addMapLayer:self.annotationGraphicsLayer withName:@"Annotation Graphics Layer"];
     
-    AGSPoint *wgs84Point = [[AGSPoint alloc] initWithX:self.savedRegion.center.longitude y:self.savedRegion.center.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
+ //   AGSPoint *wgs84Point = [[AGSPoint alloc] initWithX:self.savedRegion.center.longitude y:self.savedRegion.center.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
     
     AGSGeometryEngine *engine = [AGSGeometryEngine defaultGeometryEngine];
-    AGSPoint *webMercatorPoint = (AGSPoint*)[engine projectGeometry:wgs84Point toSpatialReference:self.spatialReference];
+    AGSPoint *webMercatorPoint = (AGSPoint*)[engine projectGeometry:self.wgs84Point toSpatialReference:self.spatialReference];
     
    // [self zoomIn:YES];
     [self zoomToResolution:40 withCenterPoint:webMercatorPoint animated:shouldAnimate];
 
-    // Not sure if this is has any importance
-   // [self.delegate mapViewDidFinishLoadingMap:self];
+    if ( self.showsUserLocation)
+    {
+     [self.gps start];
+        [self registerAsObserver];
+    }
+    
     
     // Initialize the Annotations
     self.mapannotations = [[NSMutableArray  alloc] init];
@@ -82,6 +107,27 @@
     
 }
 
+- (void)registerAsObserver {
+    [ self.gps addObserver:self
+                        forKeyPath:@"currentLocation"
+                           options:(NSKeyValueObservingOptionNew)
+                           context:NULL];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    if ([keyPath isEqual:@"currentLocation"])
+    {
+        //self.userLocation.location = [[CLLocation alloc] initWithLatitude:self.gps.currentLocation.coordinate.latitude longitude:self.gps.currentLocation.coordinate.longitude];
+        MKUserLocation *userLocation = [[MKUserLocation alloc] init];
+        self.userLocation = [[MKUserLocation alloc] init];
+        self.userLocation.location = self.gps.currentLocation;
+        userLocation.location = self.gps.currentLocation;
+        [self.delegate mapView:self didUpdateUserLocation:userLocation];
+    }
+}
 
 - (void)removeAnnotation:(id <MKAnnotation>)annotation
 {
@@ -117,12 +163,14 @@
     
    AGSPoint* markerPoint = [AGSPoint pointWithX:annotation.coordinate.longitude y:annotation.coordinate.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
     
-   AGSPoint* newMarkerPoint = [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:self.spatialReference];
+   AGSPoint* newMarkerPoint = [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:[AGSSpatialReference spatialReferenceWithWKID:102100]];
    AGSGraphic* myGraphic = [AGSGraphic graphicWithGeometry:newMarkerPoint symbol:pictureMarkerSymbol attributes:nil infoTemplateDelegate:nil];
     
     AnnotationTemplate* template = [[AnnotationTemplate alloc] init];
-    template.title = annotation.title;
-    template.subtitle = annotation.subtitle;
+    if ( [annotation respondsToSelector:@selector(title)])
+        template.title = annotation.title;
+    if ( [annotation respondsToSelector:@selector(subtitle)])
+        template.subtitle = annotation.subtitle;
     if ( pinAnnotationView.leftCalloutAccessoryView)
     {
         template.leftView =  [[UIView alloc] initWithFrame:pinAnnotationView.leftCalloutAccessoryView.frame];
@@ -134,7 +182,6 @@
     {
         template.rightView = pinAnnotationView.rightCalloutAccessoryView;
     }
-    
    myGraphic.infoTemplateDelegate = template;
    [self.annotationGraphicsLayer addGraphic:myGraphic];
    [self.annotationGraphicsLayer dataChanged];
@@ -159,14 +206,46 @@
         return NULL;
 }
 
+
+#pragma mark - MapOverlay functions
+
+-(void) addOverlay:(id<MKOverlay>)overlay
+{
+    MKOverlayView* overlayView = [self.delegate mapView:self viewForOverlay:overlay];
+    [self addSubview:overlayView];
+}
+
 - (void)setUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated
 {
 #warning not implemented
 }
 
-- (void)addOverlay:(id <MKOverlay>)overlay
+
+#pragma mark - OverlayViewDelegate
+-(CGPoint) pointForMapPoint:(MKMapPoint)mapPoint
 {
-    #warning not implemented
+    AGSPoint* agsPoint = [AGSPoint pointWithX:mapPoint.x y:mapPoint.y spatialReference:self.spatialReference];
+    return  [self toScreenPoint:agsPoint];
+}
+
+-(MKMapPoint) mapPointForPoint:(CGPoint)point
+{
+    AGSPoint* agsPoint = [self toMapPoint:point];
+    MKMapPoint mapPoint = MKMapPointMake(agsPoint.x, agsPoint.y);
+    return mapPoint;
+}
+
+-(CGRect)rectForMapRect:(MKMapRect)mapRect
+{
+    AGSEnvelope* envelope = [AGSEnvelope envelopeWithXmin:MKMapRectGetMinX(mapRect) ymin:MKMapRectGetMinY(mapRect) xmax:MKMapRectGetMaxX(mapRect) ymax:MKMapRectGetMaxY(mapRect) spatialReference:self.spatialReference];
+    return  [self toScreenRect:envelope];
+}
+
+-(MKMapRect) mapRectForRect:(CGRect)rect
+{
+    AGSEnvelope* envelope = [self toMapEnvelope:rect];
+    MKMapRect mapRect = MKMapRectMake(envelope.xmin, envelope.ymin, envelope.width, envelope.height);
+    return mapRect;
 }
 
 @end

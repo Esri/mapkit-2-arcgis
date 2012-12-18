@@ -8,7 +8,19 @@
 #import <UIKit/UIKit.h>
 //#import <MapKit/MKGeometry.h>
 #import "MKOverlay.h"
+#import <ArcGIS/ArcGIS.h>
 //#import <MapKit/MKFoundation.h>
+
+
+@protocol MKOverlayViewDelegate <NSObject>
+
+- (CGPoint)pointForMapPoint:(MKMapPoint)mapPoint;
+- (MKMapPoint)mapPointForPoint:(CGPoint)point;
+
+- (CGRect)rectForMapRect:(MKMapRect)mapRect;
+- (MKMapRect)mapRectForRect:(CGRect)rect;
+
+@end
 
 MK_CLASS_AVAILABLE(NA, 4_0)
 @interface MKOverlayView : UIView {
@@ -31,6 +43,8 @@ MK_CLASS_AVAILABLE(NA, 4_0)
     } _flags;
 }
 
+
+@property ( nonatomic, strong) id < MKOverlayViewDelegate> delegate;
 - (id)initWithOverlay:(id <MKOverlay>)overlay;
 
 @property (nonatomic, readonly) id <MKOverlay> overlay;

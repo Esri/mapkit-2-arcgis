@@ -74,13 +74,13 @@ const MKMapRect MKMapRectWorld NS_AVAILABLE(NA, 4_0);
 // Conversion between unprojected and projected coordinates
 NS_INLINE MKMapPoint MKMapPointForCoordinate(CLLocationCoordinate2D coordinate)
 {
-#warning convert to AGSPoint
+//#warning convert to AGSPoint
     return (MKMapPoint) { coordinate.latitude, coordinate.longitude };
 }
 
 NS_INLINE CLLocationCoordinate2D MKCoordinateForMapPoint(MKMapPoint mapPoint)
 {
-    #warning convert to AGSPoint
+ //   #warning convert to AGSPoint
     CLLocationCoordinate2D location;
     location.latitude = mapPoint.x;
     location.longitude = mapPoint.y;
