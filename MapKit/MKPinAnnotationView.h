@@ -6,7 +6,7 @@
 //
 
 //#import <MapKit/MKAnnotationView.h>
-#import "MapKit2ArcGIS.h"
+#import "MapKit.h"
 #import "MKAnnotationView.h"
 
 enum {

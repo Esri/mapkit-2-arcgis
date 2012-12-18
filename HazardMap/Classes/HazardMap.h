@@ -48,8 +48,8 @@
  
  */
 
-//#import <MapKit/MapKit.h>
-#import "MapKit2ArcGIS.h"
+#import <MapKit/MapKit.h>
+
 
 @interface HazardMap : NSObject <MKOverlay> {
     CLLocationCoordinate2D origin; // position of upper left hazard

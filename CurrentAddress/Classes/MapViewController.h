@@ -46,8 +46,8 @@
  */
 
 #import <UIKit/UIKit.h>
-//#import <MapKit/MapKit.h>
-#import "MapKit2ArcGIS.h"
+#import <MapKit/MapKit.h>
+
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 

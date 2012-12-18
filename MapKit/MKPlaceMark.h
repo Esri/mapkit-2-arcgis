@@ -11,7 +11,7 @@
 //#import <MapKit/MKFoundation.h>
 #import <CoreLocation/CLLocation.h>
 #import <CoreLocation/CLPlacemark.h>
-#import "MapKit2ArcGIS.h"
+#import "MapKit.h"
 
 MK_CLASS_AVAILABLE(NA, 3_0)
 @interface MKPlacemark : CLPlacemark <MKAnnotation> {

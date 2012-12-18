@@ -47,8 +47,8 @@
  */
 
 #import <CoreData/CoreData.h>
-//#import <MapKit/MapKit.h>
-#import "MapKit2ArcGIS.h"
+#import <MapKit/MapKit.h>
+
 
 enum WeatherConditions
 {

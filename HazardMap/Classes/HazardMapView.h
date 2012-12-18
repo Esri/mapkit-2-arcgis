@@ -48,8 +48,8 @@
  
  */
 
-//#import <MapKit/MapKit.h>
-#import "MapKit2ArcGIS.h"
+#import <MapKit/MapKit.h>
+
 
 @interface HazardMapView : MKOverlayView {
     CGColorRef *colors;
