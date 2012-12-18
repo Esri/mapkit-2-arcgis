@@ -20,13 +20,8 @@
 		537DA6BA1108F80B0045D54C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537DA6B91108F80B0045D54C /* DetailViewController.m */; };
 		537DA6BE1108F8460045D54C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 537DA6BC1108F8460045D54C /* DetailViewController.xib */; };
 		6BDC8248167B1C7500DDC0C0 /* GreenPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC8247167B1C7500DDC0C0 /* GreenPin.png */; };
-<<<<<<< HEAD
-		88F163E5168100A50007DB89 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F163E4168100A50007DB89 /* Default-568h@2x.png */; };
-		88F163EE168102670007DB89 /* esriLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F163ED168102670007DB89 /* esriLogo@2x.png */; };
-=======
 		6BDC828D1680F66B00DDC0C0 /* MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6AD16793F980014CA6F /* MKAnnotationView.m */; };
 		6BDC828E1680F66B00DDC0C0 /* MKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC6B916793F980014CA6F /* MKPinAnnotationView.m */; };
->>>>>>> Added new samples
 		CB6C7CB111D53FDA00AC7FA8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA511D53FDA00AC7FA8 /* Default.png */; };
 		CB6C7CB211D53FDA00AC7FA8 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA611D53FDA00AC7FA8 /* flag.png */; };
 		CB6C7CB311D53FDA00AC7FA8 /* GoldenGate.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA711D53FDA00AC7FA8 /* GoldenGate.png */; };
@@ -83,8 +78,6 @@
 		537DA6B91108F80B0045D54C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		537DA6BD1108F8460045D54C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 		6BDC8247167B1C7500DDC0C0 /* GreenPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenPin.png; sourceTree = "<group>"; };
-		88F163E4168100A50007DB89 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		88F163ED168102670007DB89 /* esriLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "esriLogo@2x.png"; sourceTree = "<group>"; };
 		CB6C7CA511D53FDA00AC7FA8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CB6C7CA611D53FDA00AC7FA8 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
 		CB6C7CA711D53FDA00AC7FA8 /* GoldenGate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoldenGate.png; sourceTree = "<group>"; };
@@ -166,7 +159,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				88F163E4168100A50007DB89 /* Default-568h@2x.png */,
 				E2AEC6A916793F980014CA6F /* MapKit2ArcGIS */,
 				CB8F294911D176F900E84C56 /* ReadMe.txt */,
 				CB6C7CA311D53FA900AC7FA8 /* Classes */,
@@ -219,14 +211,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		88F163E61681016E0007DB89 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				88F163ED168102670007DB89 /* esriLogo@2x.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		CB6C7CA311D53FA900AC7FA8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +252,6 @@
 		E2AEC6A916793F980014CA6F /* MapKit2ArcGIS */ = {
 			isa = PBXGroup;
 			children = (
-				88F163E61681016E0007DB89 /* Resources */,
 				E2AEC6AA16793F980014CA6F /* MapKit2ArcGIS.h */,
 				E2AEC6AB16793F980014CA6F /* MKAnnotation.h */,
 				E2AEC6AC16793F980014CA6F /* MKAnnotationView.h */,
@@ -367,8 +350,6 @@
 				6BDC8248167B1C7500DDC0C0 /* GreenPin.png in Resources */,
 				E21FE514167BBED900A66463 /* AnnotationViewController.xib in Resources */,
 				E2CE21E5167BE2E1000EB508 /* BlueStickpin.png in Resources */,
-				88F163E5168100A50007DB89 /* Default-568h@2x.png in Resources */,
-				88F163EE168102670007DB89 /* esriLogo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +420,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -448,7 +428,6 @@
 				);
 				PRODUCT_NAME = MapCallouts;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -470,7 +449,6 @@
 				);
 				PRODUCT_NAME = MapCallouts;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
