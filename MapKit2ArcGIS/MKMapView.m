@@ -8,6 +8,8 @@
 
 #import "MKMapView.h"
 
+#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
+
 @implementation MKMapView
 
 - (void)setRegion:(MKCoordinateRegion)region
@@ -61,6 +63,22 @@
     
     // Initialize the Annotations
     self.mapannotations = [[NSMutableArray  alloc] init];
+    
+    // Create the watermark image view...
+	// you could also use IB to place an image view, then create an IBOutlet in the header and hook it up
+	// that way.
+    
+    CGFloat bottomY = 390;
+    if ( IS_IPHONE5 == YES)
+        bottomY = 460;
+    
+	UIImageView *watermarkIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, bottomY, 43, 25)];
+	
+	// this will load the @2x version automatically if on iPhone4
+	watermarkIV.image = [UIImage imageNamed:@"esriLogo.png"];
+	watermarkIV.userInteractionEnabled = NO;
+    
+	[mapView.superview addSubview:watermarkIV];
     
 }
 
