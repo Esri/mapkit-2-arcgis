@@ -46,6 +46,7 @@
 
 - (void)setRegion:(MKCoordinateRegion)region;
 - (void)setRegion:(MKCoordinateRegion)region animated:(BOOL)bAnimated;
+- (void)setCenterCoordinate:(CLLocationCoordinate2D)coordinate animated:(BOOL)animated;
 - (void)setUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated NS_AVAILABLE(NA, 5_0);
 - (void)addOverlay:(id <MKOverlay>)overlay NS_AVAILABLE(NA, 4_0);
 

@@ -63,6 +63,10 @@
     [self addMapLayer:layer withName:@"basemap"];
 }
 
+- (void)setCenterCoordinate:(CLLocationCoordinate2D)coordinate animated:(BOOL)animated
+{
+#warning implement
+}
 
 
 - (void)mapViewDidLoad:(AGSMapView *)mapView
@@ -93,9 +97,9 @@
 	// you could also use IB to place an image view, then create an IBOutlet in the header and hook it up
 	// that way.
     
-    CGFloat bottomY = 390;
+    CGFloat bottomY = 350;
     if ( IS_IPHONE5 == YES)
-        bottomY = 460;
+        bottomY = 440;
     
 	UIImageView *watermarkIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, bottomY, 43, 25)];
 	
