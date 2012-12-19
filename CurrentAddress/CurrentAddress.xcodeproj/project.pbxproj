@@ -45,7 +45,6 @@
 		E2D56F2816811F7300FF14AC /* MKPlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D56F1816811F7300FF14AC /* MKPlaceMark.m */; };
 		E2D56F2916811F7300FF14AC /* MKUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D56F1B16811F7300FF14AC /* MKUserLocation.m */; };
 		E2D56F2A16811F7300FF14AC /* esriLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D56F1E16811F7300FF14AC /* esriLogo@2x.png */; };
-		E2D56F2B16811FC000FF14AC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300A082A10360561009C9A1C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,7 +118,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2D56F2B16811FC000FF14AC /* MapKit.framework in Frameworks */,
 				53D3762D161F3AEF00BE0895 /* CoreLocation.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,

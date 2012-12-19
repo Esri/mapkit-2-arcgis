@@ -1,0 +1,22 @@
+//
+// Prefix header for all source files of the 'Geonotes' target in the 'Geonotes' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <Geoloqi.h>
+    #import "LQConfig.h"
+#endif
+
+#define NSLog(args...) [[LQSession savedSession] log:args]
+#define SHOW_LOG_SETTINGS [[NSUserDefaults standardUserDefaults] boolForKey:@"com.geoloqi.geonotes.showLogSettings"]
+#define DEFAULT_TABLE_VIEW_BACKGROUND_COLOR [UIColor colorWithWhite:249.0/255.0 alpha:1.0]
+
+static NSString *const kLQDisplayNameUserDefaultsKey = @"com.geoloqi.geonotes.displayName";
