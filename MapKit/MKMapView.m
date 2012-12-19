@@ -65,7 +65,9 @@
 
 - (void)setCenterCoordinate:(CLLocationCoordinate2D)coordinate animated:(BOOL)animated
 {
-#warning implement
+    AGSPoint *centerPoint = [[AGSPoint alloc] initWithX:coordinate.longitude y:coordinate.latitude spatialReference:[AGSSpatialReference wgs84SpatialReference]];
+    
+    [self centerAtPoint:centerPoint animated:animated];
 }
 
 
