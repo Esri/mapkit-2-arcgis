@@ -57,6 +57,7 @@
 
 - (void)removeAnnotation:(id <MKAnnotation>)annotation;
 - (void)removeAnnotations:(NSArray *)annotations;
+//- (CGPoint)convertCoordinate:(CLLocationCoordinate2D)coordinate toPointToView:(UIView *)view;
 
 @property (nonatomic, readonly) NSArray *annotations;
 - (NSSet *)annotationsInMapRect:(MKMapRect)mapRect NS_AVAILABLE(NA, 4_2);

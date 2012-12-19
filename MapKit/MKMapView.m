@@ -112,6 +112,10 @@
 	[mapView.superview addSubview:watermarkIV];
     
 }
+//- (CGPoint)convertCoordinate:(CLLocationCoordinate2D)coordinate toPointToView:(UIView *)view
+//{
+//    return [self convertCoordinate:coordinate toPointToView:view];
+//}
 
 - (void)registerAsObserver {
     [ self.gps addObserver:self
