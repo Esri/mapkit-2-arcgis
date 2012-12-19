@@ -38,7 +38,7 @@ NS_INLINE MKCoordinateRegion MKCoordinateRegionMake(CLLocationCoordinate2D cente
 	return region;
 }
 
-MK_EXTERN MKCoordinateRegion MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D centerCoordinate, CLLocationDistance latitudinalMeters, CLLocationDistance longitudinalMeters);
+MKCoordinateRegion MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D centerCoordinate, CLLocationDistance latitudinalMeters, CLLocationDistance longitudinalMeters);
 
 // Projected geometry is available in iPhone OS 4.0 and later
 #if (__IPHONE_4_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED)
@@ -72,21 +72,9 @@ const MKMapSize MKMapSizeWorld NS_AVAILABLE(NA, 4_0);
 const MKMapRect MKMapRectWorld NS_AVAILABLE(NA, 4_0);
 
 // Conversion between unprojected and projected coordinates
-NS_INLINE MKMapPoint MKMapPointForCoordinate(CLLocationCoordinate2D coordinate)
-{
-//#warning convert to AGSPoint
-    return (MKMapPoint) { coordinate.latitude, coordinate.longitude };
-}
+MKMapPoint MKMapPointForCoordinate(CLLocationCoordinate2D coordinate);
 
-NS_INLINE CLLocationCoordinate2D MKCoordinateForMapPoint(MKMapPoint mapPoint)
-{
- //   #warning convert to AGSPoint
-    CLLocationCoordinate2D location;
-    location.latitude = mapPoint.x;
-    location.longitude = mapPoint.y;
-    
-    return location;
-}
+CLLocationCoordinate2D MKCoordinateForMapPoint(MKMapPoint mapPoint);
 
 // Conversion between distances and projected coordinates
 CLLocationDistance MKMetersPerMapPointAtLatitude(CLLocationDegrees latitude) NS_AVAILABLE(NA, 4_0);
