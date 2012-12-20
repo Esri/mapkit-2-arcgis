@@ -87,7 +87,7 @@
 
     if ( self.showsUserLocation)
     {
-     [self.gps start];
+        [self.locationDisplay startDataSource];
         [self registerAsObserver];
     }
     
@@ -118,8 +118,8 @@
 //}
 
 - (void)registerAsObserver {
-    [ self.gps addObserver:self
-                        forKeyPath:@"currentLocation"
+    [ self.locationDisplay addObserver:self
+                        forKeyPath:@"location"
                            options:(NSKeyValueObservingOptionNew)
                            context:NULL];
 }
@@ -133,8 +133,8 @@
         //self.userLocation.location = [[CLLocation alloc] initWithLatitude:self.gps.currentLocation.coordinate.latitude longitude:self.gps.currentLocation.coordinate.longitude];
         MKUserLocation *userLocation = [[MKUserLocation alloc] init];
         self.userLocation = [[MKUserLocation alloc] init];
-        self.userLocation.location = self.gps.currentLocation;
-        userLocation.location = self.gps.currentLocation;
+        self.userLocation.location = self.locationDisplay.location;
+        userLocation.location = self.locationDisplay.location;
         [self.delegate mapView:self didUpdateUserLocation:userLocation];
     }
 }
