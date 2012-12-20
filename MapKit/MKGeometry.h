@@ -154,14 +154,14 @@ NS_INLINE NSString *MKStringFromMapRect(MKMapRect rect) {
 #endif
 
 MK_EXTERN MKMapRect MKMapRectUnion(MKMapRect rect1, MKMapRect rect2) NS_AVAILABLE(NA, 4_0);
-MK_EXTERN MKMapRect MKMapRectIntersection(MKMapRect rect1, MKMapRect rect2) NS_AVAILABLE(NA, 4_0);
-MK_EXTERN MKMapRect MKMapRectInset(MKMapRect rect, double dx, double dy) NS_AVAILABLE(NA, 4_0);
+MKMapRect MKMapRectIntersection(MKMapRect rect1, MKMapRect rect2) NS_AVAILABLE(NA, 4_0);
+MKMapRect MKMapRectInset(MKMapRect rect, double dx, double dy) NS_AVAILABLE(NA, 4_0);
 MK_EXTERN MKMapRect MKMapRectOffset(MKMapRect rect, double dx, double dy) NS_AVAILABLE(NA, 4_0);
 MK_EXTERN void MKMapRectDivide(MKMapRect rect, MKMapRect *slice, MKMapRect *remainder, double amount, CGRectEdge edge) NS_AVAILABLE(NA, 4_0);
 
 MK_EXTERN BOOL MKMapRectContainsPoint(MKMapRect rect, MKMapPoint point) NS_AVAILABLE(NA, 4_0);
 MK_EXTERN BOOL MKMapRectContainsRect(MKMapRect rect1, MKMapRect rect2) NS_AVAILABLE(NA, 4_0);
-MK_EXTERN BOOL MKMapRectIntersectsRect(MKMapRect rect1, MKMapRect rect2) NS_AVAILABLE(NA, 4_0);
+BOOL MKMapRectIntersectsRect(MKMapRect rect1, MKMapRect rect2) NS_AVAILABLE(NA, 4_0);
 
 MK_EXTERN MKCoordinateRegion MKCoordinateRegionForMapRect(MKMapRect rect) NS_AVAILABLE(NA, 4_0);
 

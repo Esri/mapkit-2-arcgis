@@ -84,4 +84,11 @@
    // #warning not implemented
 }
 
+CGFloat MKRoadWidthAtZoomScale(MKZoomScale zoomScale)
+{
+#warning implement this, remove this hack
+    CGFloat roadWidth = zoomScale;
+    return roadWidth;
+}
+
 @end

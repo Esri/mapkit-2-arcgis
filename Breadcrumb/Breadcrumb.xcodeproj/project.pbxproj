@@ -30,7 +30,6 @@
 		53DEB8A71249592A00860C26 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DEB8A61249592A00860C26 /* AudioToolbox.framework */; };
 		88104A1A162E186100914A27 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88104A19162E186100914A27 /* QuartzCore.framework */; };
 		88104A1C162E186A00914A27 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88104A1B162E186A00914A27 /* CoreText.framework */; };
-		88104A1E162E187600914A27 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88104A1D162E187600914A27 /* libstdc++.dylib */; };
 		88104A20162E187D00914A27 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88104A1F162E187D00914A27 /* MediaPlayer.framework */; };
 		88104A22162E188700914A27 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88104A21162E188700914A27 /* MobileCoreServices.framework */; };
 		88104A24162E189000914A27 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88104A23162E189000914A27 /* libz.dylib */; };
@@ -48,6 +47,8 @@
 		8863F45D16826BEB00B6FE8D /* MKPlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 8863F44D16826BEB00B6FE8D /* MKPlaceMark.m */; };
 		8863F45E16826BEB00B6FE8D /* MKUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8863F45016826BEB00B6FE8D /* MKUserLocation.m */; };
 		8863F45F16826BEB00B6FE8D /* esriLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8863F45316826BEB00B6FE8D /* esriLogo@2x.png */; };
+		887F764216838AFF009D58BA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F764116838AFF009D58BA /* OpenGLES.framework */; };
+		887F76431683C6B2009D58BA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F763F16838AFB009D58BA /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,8 @@
 		8863F45016826BEB00B6FE8D /* MKUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUserLocation.m; sourceTree = "<group>"; };
 		8863F45116826BEB00B6FE8D /* MKUserTrackingMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUserTrackingMode.h; sourceTree = "<group>"; };
 		8863F45316826BEB00B6FE8D /* esriLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "esriLogo@2x.png"; sourceTree = "<group>"; };
+		887F763F16838AFB009D58BA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		887F764116838AFF009D58BA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Breadcrumb-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Breadcrumb-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,11 +127,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887F76431683C6B2009D58BA /* libc++.dylib in Frameworks */,
+				887F764216838AFF009D58BA /* OpenGLES.framework in Frameworks */,
 				88104A26162E189500914A27 /* Security.framework in Frameworks */,
 				88104A24162E189000914A27 /* libz.dylib in Frameworks */,
 				88104A22162E188700914A27 /* MobileCoreServices.framework in Frameworks */,
 				88104A20162E187D00914A27 /* MediaPlayer.framework in Frameworks */,
-				88104A1E162E187600914A27 /* libstdc++.dylib in Frameworks */,
 				88104A1C162E186A00914A27 /* CoreText.framework in Frameworks */,
 				88104A1A162E186100914A27 /* QuartzCore.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -177,6 +181,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				887F764116838AFF009D58BA /* OpenGLES.framework */,
+				887F763F16838AFB009D58BA /* libc++.dylib */,
 				8863F43616826BEB00B6FE8D /* MapKit */,
 				8863F43416826AB100B6FE8D /* MapKit.framework */,
 				88104A32162E1BAF00914A27 /* Default-568h@2x.png */,
@@ -411,7 +417,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/**";
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/**";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -436,7 +442,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/**";
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Breadcrumb_Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
