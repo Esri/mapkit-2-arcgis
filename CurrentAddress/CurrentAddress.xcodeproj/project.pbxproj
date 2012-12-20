@@ -30,9 +30,10 @@
 		6BDC827816805B7A00DDC0C0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDC827116805B7A00DDC0C0 /* libz.dylib */; };
 		6BDC827916805B7A00DDC0C0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDC827216805B7A00DDC0C0 /* MobileCoreServices.framework */; };
 		6BDC827A16805B7A00DDC0C0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDC827316805B7A00DDC0C0 /* MediaPlayer.framework */; };
-		6BDC827B16805B7A00DDC0C0 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDC827416805B7A00DDC0C0 /* libstdc++.dylib */; };
 		6BDC827C16805B7A00DDC0C0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDC827516805B7A00DDC0C0 /* CoreText.framework */; };
 		6BDC827D16805B7A00DDC0C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDC827616805B7A00DDC0C0 /* QuartzCore.framework */; };
+		887F7608168387A4009D58BA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F7607168387A4009D58BA /* libc++.dylib */; };
+		887F760A168387AC009D58BA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F7609168387AC009D58BA /* OpenGLES.framework */; };
 		E2D56F1F16811F7300FF14AC /* AnnotationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D56F0316811F7300FF14AC /* AnnotationTemplate.m */; };
 		E2D56F2016811F7300FF14AC /* AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D56F0516811F7300FF14AC /* AnnotationViewController.m */; };
 		E2D56F2116811F7300FF14AC /* AnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D56F0616811F7300FF14AC /* AnnotationViewController.xib */; };
@@ -82,6 +83,8 @@
 		6BDC827416805B7A00DDC0C0 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		6BDC827516805B7A00DDC0C0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		6BDC827616805B7A00DDC0C0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		887F7607168387A4009D58BA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		887F7609168387AC009D58BA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* CurrentAddress-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CurrentAddress-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		E2D56F0216811F7300FF14AC /* AnnotationTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationTemplate.h; sourceTree = "<group>"; };
 		E2D56F0316811F7300FF14AC /* AnnotationTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationTemplate.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887F760A168387AC009D58BA /* OpenGLES.framework in Frameworks */,
+				887F7608168387A4009D58BA /* libc++.dylib in Frameworks */,
 				53D3762D161F3AEF00BE0895 /* CoreLocation.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -126,7 +131,6 @@
 				6BDC827816805B7A00DDC0C0 /* libz.dylib in Frameworks */,
 				6BDC827916805B7A00DDC0C0 /* MobileCoreServices.framework in Frameworks */,
 				6BDC827A16805B7A00DDC0C0 /* MediaPlayer.framework in Frameworks */,
-				6BDC827B16805B7A00DDC0C0 /* libstdc++.dylib in Frameworks */,
 				6BDC827C16805B7A00DDC0C0 /* CoreText.framework in Frameworks */,
 				6BDC827D16805B7A00DDC0C0 /* QuartzCore.framework in Frameworks */,
 			);
@@ -163,6 +167,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				887F7609168387AC009D58BA /* OpenGLES.framework */,
+				887F7607168387A4009D58BA /* libc++.dylib */,
 				E2D56F0116811F7300FF14AC /* MapKit */,
 				308ACE58106C19A60042E5C1 /* ReadMe.txt */,
 				080E96DDFE201D6D7F000001 /* Sources */,

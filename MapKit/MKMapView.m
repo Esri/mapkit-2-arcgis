@@ -194,7 +194,7 @@
     }
    myGraphic.infoTemplateDelegate = template;
    [self.annotationGraphicsLayer addGraphic:myGraphic];
-   [self.annotationGraphicsLayer dataChanged];
+   [self.annotationGraphicsLayer refresh];
     
 }
 
