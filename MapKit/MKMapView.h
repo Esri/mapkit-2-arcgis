@@ -38,6 +38,8 @@
 @property ( nonatomic) AGSPoint* wgs84Point;
 @property ( nonatomic, strong) NSMutableArray* mapannotations;
 @property (nonatomic) MKUserTrackingMode userTrackingMode NS_AVAILABLE(NA, 5_0);
+@property (nonatomic) MKCoordinateRegion region;
+@property (nonatomic) CLLocationCoordinate2D centerCoordinate;
 
 
 // Access the visible region of the map in projected coordinates.
