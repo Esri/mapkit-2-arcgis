@@ -84,9 +84,10 @@
 		0FDE2AD915A8DEE300FB78A7 /* geonote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FDE2AD515A8DEE300FB78A7 /* geonote@2x.png */; };
 		0FDE2ADA15A8DEE300FB78A7 /* layers@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FDE2AD615A8DEE300FB78A7 /* layers@2x.png */; };
 		0FDE2ADB15A8DEE300FB78A7 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FDE2AD715A8DEE300FB78A7 /* settings@2x.png */; };
+		880A63341683D09E0038C685 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 880A63331683D09E0038C685 /* libc++.dylib */; };
+		880A63361683D0A40038C685 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880A63351683D0A40038C685 /* OpenGLES.framework */; };
 		883F38F816813C7C002BDAF5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883F38F716813C7C002BDAF5 /* Security.framework */; };
 		883F38FA16813C8E002BDAF5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883F38F916813C8E002BDAF5 /* CoreText.framework */; };
-		883F38FC16813C9D002BDAF5 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 883F38FB16813C9D002BDAF5 /* libstdc++.dylib */; };
 		883F38FE16813CB6002BDAF5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883F38FD16813CB6002BDAF5 /* MobileCoreServices.framework */; };
 		883F390016813CBE002BDAF5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883F38FF16813CBE002BDAF5 /* MediaPlayer.framework */; };
 		883F390216813CD2002BDAF5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 883F390116813CD2002BDAF5 /* libz.dylib */; };
@@ -292,6 +293,8 @@
 		0FDE2AD515A8DEE300FB78A7 /* geonote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "geonote@2x.png"; path = "Graphics/geonote@2x.png"; sourceTree = "<group>"; };
 		0FDE2AD615A8DEE300FB78A7 /* layers@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "layers@2x.png"; path = "Graphics/layers@2x.png"; sourceTree = "<group>"; };
 		0FDE2AD715A8DEE300FB78A7 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings@2x.png"; path = "Graphics/settings@2x.png"; sourceTree = "<group>"; };
+		880A63331683D09E0038C685 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		880A63351683D0A40038C685 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		883F38F716813C7C002BDAF5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		883F38F916813C8E002BDAF5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		883F38FB16813C9D002BDAF5 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
@@ -417,10 +420,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880A63361683D0A40038C685 /* OpenGLES.framework in Frameworks */,
+				880A63341683D09E0038C685 /* libc++.dylib in Frameworks */,
 				883F390216813CD2002BDAF5 /* libz.dylib in Frameworks */,
 				883F390016813CBE002BDAF5 /* MediaPlayer.framework in Frameworks */,
 				883F38FE16813CB6002BDAF5 /* MobileCoreServices.framework in Frameworks */,
-				883F38FC16813C9D002BDAF5 /* libstdc++.dylib in Frameworks */,
 				0FDE2A8715A8C8EA00FB78A7 /* CoreLocation.framework in Frameworks */,
 				883F38FA16813C8E002BDAF5 /* CoreText.framework in Frameworks */,
 				883F38F816813C7C002BDAF5 /* Security.framework in Frameworks */,
@@ -506,6 +510,8 @@
 		0FDE2A3915A8C27000FB78A7 = {
 			isa = PBXGroup;
 			children = (
+				880A63351683D0A40038C685 /* OpenGLES.framework */,
+				880A63331683D09E0038C685 /* libc++.dylib */,
 				8863F3CB16822AFF00B6FE8D /* MapKit */,
 				8863F39F1682256200B6FE8D /* MapKit.framework */,
 				883F390116813CD2002BDAF5 /* libz.dylib */,
