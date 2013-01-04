@@ -45,15 +45,20 @@
  
  */
 
+
+
 #import "MapViewController.h"
 #import "WeatherServer.h"
 #import "WeatherItem.h"
 #import "WeatherAnnotationView.h"
 
+#import <MapKit/MapKit.h>
 
 @implementation MapViewController
 
 @synthesize titleBar, mapView, weatherServer;
+
+
 
 - (void)viewDidLoad
 {
@@ -88,8 +93,9 @@
     NSArray *oldAnnotations = mapView.annotations;
     [mapView removeAnnotations:oldAnnotations];
  
-    NSArray *weatherItems = [weatherServer weatherItemsForMapRegion:mapView.savedRegion maximumCount:4];
-    [mapView addAnnotations:weatherItems];
+    // TODO the savedRegion does not work
+    /*NSArray *weatherItems = [weatherServer weatherItemsForMapRegion:map.savedRegion maximumCount:4];
+    [mapView addAnnotations:weatherItems];*/
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)map viewForAnnotation:(id <MKAnnotation>)annotation

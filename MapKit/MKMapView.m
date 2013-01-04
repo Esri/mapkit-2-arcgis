@@ -12,6 +12,7 @@
 
 @implementation MKMapView
 
+
 - (void)setRegion:(MKCoordinateRegion)region
 {
     self.layerDelegate = self;
@@ -34,7 +35,7 @@
     AGSTiledMapServiceLayer* layer = [AGSTiledMapServiceLayer tiledMapServiceLayerWithURL: url];
     [self addMapLayer:layer withName:@"basemap"];
     
-    
+    self.savedRegion = region;
 }
 
 - (void)setRegion:(MKCoordinateRegion)region animated:(BOOL)bAnimated

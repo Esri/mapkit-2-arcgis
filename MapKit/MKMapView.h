@@ -35,8 +35,8 @@
 // The loading delegate methods will be called as map content is loaded.
 @property (nonatomic) MKMapType mapType;
 @property (nonatomic) MKCoordinateRegion savedRegion;
-@property ( nonatomic) AGSPoint* wgs84Point;
-@property ( nonatomic, strong) NSMutableArray* mapannotations;
+@property (nonatomic,strong) AGSPoint* wgs84Point;
+@property (nonatomic,strong) NSMutableArray* mapannotations;
 @property (nonatomic) MKUserTrackingMode userTrackingMode NS_AVAILABLE(NA, 5_0);
 @property (nonatomic) MKCoordinateRegion region;
 @property (nonatomic) CLLocationCoordinate2D centerCoordinate;
