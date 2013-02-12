@@ -82,6 +82,7 @@ enum
     newRegion.span.longitudeDelta = 0.109863;
 
     [self.mapView setRegion:newRegion animated:YES];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated

@@ -20,6 +20,7 @@
 		537DA6BA1108F80B0045D54C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537DA6B91108F80B0045D54C /* DetailViewController.m */; };
 		537DA6BE1108F8460045D54C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 537DA6BC1108F8460045D54C /* DetailViewController.xib */; };
 		6BDC8248167B1C7500DDC0C0 /* GreenPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC8247167B1C7500DDC0C0 /* GreenPin.png */; };
+		88078EA216A605F200F8FB5B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5376EF060F7AE77A005C5273 /* MapKit.framework */; };
 		887F760316837FF0009D58BA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F760216837FF0009D58BA /* libc++.dylib */; };
 		887F760516838007009D58BA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F760416838007009D58BA /* OpenGLES.framework */; };
 		CB6C7CB111D53FDA00AC7FA8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA511D53FDA00AC7FA8 /* Default.png */; };
@@ -140,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88078EA216A605F200F8FB5B /* MapKit.framework in Frameworks */,
 				887F760516838007009D58BA /* OpenGLES.framework in Frameworks */,
 				887F760316837FF0009D58BA /* libc++.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,

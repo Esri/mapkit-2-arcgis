@@ -86,7 +86,6 @@
 		0FDE2ADB15A8DEE300FB78A7 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FDE2AD715A8DEE300FB78A7 /* settings@2x.png */; };
 		880A63341683D09E0038C685 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 880A63331683D09E0038C685 /* libc++.dylib */; };
 		880A63361683D0A40038C685 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880A63351683D0A40038C685 /* OpenGLES.framework */; };
-		882966111696581D00420E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8863F39F1682256200B6FE8D /* MapKit.framework */; };
 		883F38F816813C7C002BDAF5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883F38F716813C7C002BDAF5 /* Security.framework */; };
 		883F38FA16813C8E002BDAF5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883F38F916813C8E002BDAF5 /* CoreText.framework */; };
 		883F38FE16813CB6002BDAF5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883F38FD16813CB6002BDAF5 /* MobileCoreServices.framework */; };
@@ -421,7 +420,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				882966111696581D00420E1B /* MapKit.framework in Frameworks */,
 				880A63361683D0A40038C685 /* OpenGLES.framework in Frameworks */,
 				880A63341683D09E0038C685 /* libc++.dylib in Frameworks */,
 				883F390216813CD2002BDAF5 /* libz.dylib in Frameworks */,

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8829661716976E7100420E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8829661616976E7100420E1B /* MapKit.framework */; };
 		885197561625F8E400EEF3F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885197551625F8E400EEF3F9 /* UIKit.framework */; };
 		885197581625F8E400EEF3F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885197571625F8E400EEF3F9 /* Foundation.framework */; };
 		8851975A1625F8E400EEF3F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885197591625F8E400EEF3F9 /* CoreGraphics.framework */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8829661616976E7100420E1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		885197511625F8E400EEF3F9 /* SimpleMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885197551625F8E400EEF3F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		885197571625F8E400EEF3F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8829661716976E7100420E1B /* MapKit.framework in Frameworks */,
 				887F76131683891C009D58BA /* libc++.dylib in Frameworks */,
 				887F76101683890F009D58BA /* OpenGLES.framework in Frameworks */,
 				885197871625F97500EEF3F9 /* Security.framework in Frameworks */,
@@ -124,6 +127,7 @@
 		885197461625F8E400EEF3F9 = {
 			isa = PBXGroup;
 			children = (
+				8829661616976E7100420E1B /* MapKit.framework */,
 				887F76141683893D009D58BA /* MapKit */,
 				887F76121683891C009D58BA /* libc++.dylib */,
 				887F760F1683890F009D58BA /* OpenGLES.framework */,
