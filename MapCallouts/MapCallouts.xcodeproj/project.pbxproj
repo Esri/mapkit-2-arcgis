@@ -20,9 +20,9 @@
 		537DA6BA1108F80B0045D54C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537DA6B91108F80B0045D54C /* DetailViewController.m */; };
 		537DA6BE1108F8460045D54C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 537DA6BC1108F8460045D54C /* DetailViewController.xib */; };
 		6BDC8248167B1C7500DDC0C0 /* GreenPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC8247167B1C7500DDC0C0 /* GreenPin.png */; };
-		88078EA216A605F200F8FB5B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5376EF060F7AE77A005C5273 /* MapKit.framework */; };
 		887F760316837FF0009D58BA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F760216837FF0009D58BA /* libc++.dylib */; };
 		887F760516838007009D58BA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F760416838007009D58BA /* OpenGLES.framework */; };
+		88D2ECA416CABB79004B4C45 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D2ECA316CABB79004B4C45 /* Default-568h@2x.png */; };
 		CB6C7CB111D53FDA00AC7FA8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA511D53FDA00AC7FA8 /* Default.png */; };
 		CB6C7CB211D53FDA00AC7FA8 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA611D53FDA00AC7FA8 /* flag.png */; };
 		CB6C7CB311D53FDA00AC7FA8 /* GoldenGate.png in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7CA711D53FDA00AC7FA8 /* GoldenGate.png */; };
@@ -84,6 +84,7 @@
 		6BDC8247167B1C7500DDC0C0 /* GreenPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenPin.png; sourceTree = "<group>"; };
 		887F760216837FF0009D58BA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		887F760416838007009D58BA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		88D2ECA316CABB79004B4C45 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CB6C7CA511D53FDA00AC7FA8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CB6C7CA611D53FDA00AC7FA8 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
 		CB6C7CA711D53FDA00AC7FA8 /* GoldenGate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoldenGate.png; sourceTree = "<group>"; };
@@ -141,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88078EA216A605F200F8FB5B /* MapKit.framework in Frameworks */,
 				887F760516838007009D58BA /* OpenGLES.framework in Frameworks */,
 				887F760316837FF0009D58BA /* libc++.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -171,6 +171,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				88D2ECA316CABB79004B4C45 /* Default-568h@2x.png */,
 				887F760416838007009D58BA /* OpenGLES.framework */,
 				887F760216837FF0009D58BA /* libc++.dylib */,
 				E2D56F2C16811FE400FF14AC /* MapKit */,
@@ -377,6 +378,7 @@
 				E2CE21E5167BE2E1000EB508 /* BlueStickpin.png in Resources */,
 				E2D56F4C16811FE400FF14AC /* AnnotationViewController.xib in Resources */,
 				E2D56F5516811FE400FF14AC /* esriLogo@2x.png in Resources */,
+				88D2ECA416CABB79004B4C45 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

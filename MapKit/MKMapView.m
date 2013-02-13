@@ -17,7 +17,7 @@
 {
     self.layerDelegate = self;
     self.savedRegion = region;
-     self.wgs84Point = [[AGSPoint alloc] initWithX:self.savedRegion.center.longitude y:self.savedRegion.center.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
+    self.wgs84Point = [[AGSPoint alloc] initWithX:self.savedRegion.center.longitude y:self.savedRegion.center.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
 
     NSURL* url;
     switch (self.mapType)
@@ -83,8 +83,9 @@
     AGSGeometryEngine *engine = [AGSGeometryEngine defaultGeometryEngine];
     AGSPoint *webMercatorPoint = (AGSPoint*)[engine projectGeometry:self.wgs84Point toSpatialReference:self.spatialReference];
     
-   // [self zoomIn:YES];
-    [self zoomToResolution:40 withCenterPoint:webMercatorPoint animated:shouldAnimate];
+    [self zoomIn:YES];
+    //[self zoomToResolution:60 withCenterPoint:webMercatorPoint animated:shouldAnimate];
+    [self centerAtPoint:webMercatorPoint animated:shouldAnimate];
 
     if ( self.showsUserLocation)
     {
