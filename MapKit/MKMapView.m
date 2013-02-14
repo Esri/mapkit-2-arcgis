@@ -86,6 +86,13 @@
     [self zoomIn:YES];
     //[self zoomToResolution:60 withCenterPoint:webMercatorPoint animated:shouldAnimate];
     [self centerAtPoint:webMercatorPoint animated:shouldAnimate];
+    
+    if ( self.savedRegion.span.latitudeDelta > 0) {
+        AGSMutablePolygon * wg84Poly = [engine bufferGeometry:self.wgs84Point byDistance:(self.savedRegion.span.latitudeDelta + self.savedRegion.span.longitudeDelta / 2)];
+        AGSGeometry *webMercatorPoly = [engine projectGeometry:wg84Poly toSpatialReference:self.spatialReference];
+        
+        [self zoomToEnvelope:webMercatorPoly.envelope animated:NO];
+    }
 
     if ( self.showsUserLocation)
     {
@@ -231,7 +238,7 @@
     CLLocationCoordinate2D coordinates = [overlay coordinate];
     
     AGSPoint* markerPoint = [AGSPoint pointWithX:coordinates.longitude y:coordinates.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
-    AGSPoint* newMarkerPoint = [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:[AGSSpatialReference spatialReferenceWithWKID:102100]];
+    AGSPoint* newMarkerPoint = (AGSPoint*) [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:[AGSSpatialReference spatialReferenceWithWKID:102100]];
     
     if ( self.annotationGraphicsLayer == nil ) {
         self.annotationGraphicsLayer = [AGSGraphicsLayer graphicsLayer];
