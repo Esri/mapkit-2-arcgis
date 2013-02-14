@@ -223,8 +223,26 @@
 
 -(void) addOverlay:(id<MKOverlay>)overlay
 {
-    MKOverlayView* overlayView = [self.delegate mapView:self viewForOverlay:overlay];
+    /*MKOverlayView* overlayView = [self.delegate mapView:self viewForOverlay:overlay];
+    // TO FIX adding a View to the Map does not work in 10.1.1
     [self addSubview:overlayView];
+     */
+    
+    CLLocationCoordinate2D coordinates = [overlay coordinate];
+    
+    AGSPoint* markerPoint = [AGSPoint pointWithX:coordinates.longitude y:coordinates.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
+    AGSPoint* newMarkerPoint = [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:[AGSSpatialReference spatialReferenceWithWKID:102100]];
+    
+    if ( self.annotationGraphicsLayer == nil ) {
+        self.annotationGraphicsLayer = [AGSGraphicsLayer graphicsLayer];
+        [self addMapLayer:self.annotationGraphicsLayer withName:@"Annotation Graphics Layer"];
+    }
+    
+    AGSSimpleMarkerSymbol *symbol = [AGSSimpleMarkerSymbol simpleMarkerSymbolWithColor:[UIColor blueColor]];
+       
+    AGSGraphic *graphic = [[AGSGraphic alloc] initWithGeometry:newMarkerPoint symbol:symbol attributes:nil infoTemplateDelegate:nil];
+    [self.annotationGraphicsLayer addGraphic:graphic];
+    
 }
 
 - (void)setUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated
