@@ -21,4 +21,8 @@ WeatherMap/.DS_Store
 
 *.xcuserstate
 
+<<<<<<< HEAD
 MapCallouts/.DS_Store
+=======
+*.xcuserstate
+>>>>>>> sync to get the lastest

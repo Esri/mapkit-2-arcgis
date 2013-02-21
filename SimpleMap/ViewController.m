@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
 	
-    	self.mapView.mapType = MKMapTypeStandard;
+    self.mapView.mapType = MKMapTypeStandard;
     
 	MKCoordinateRegion region = { {0.0, 0.0 }, { 0.0, 0.0 } };
     
