@@ -4,9 +4,9 @@ MapKit 2 ArcGIS
 
 This solution migrates MapKit to ArcGIS without code changes.
 
-The demo was developed for the iPhone using the ArcGIS Runtime SDK for iOS 2.3.2, xCode 4.5 (with Automatic Reference Counting) and iOS 6.0. 
+The demo was developed for the iPhone using the ArcGIS Runtime SDK for iOS 10.1.1, xCode 4.6 (with Automatic Reference Counting) and iOS 6.1. 
 
-![App](https://raw.github.com/ArcGIS/driving-directions-ios/master/picture.png)
+![App](https://raw.github.com/Esri/mapkit-2-arcgis/master/image.png)
 
 ## Features
 * All the features for MapKit.
@@ -40,7 +40,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 Anyone and everyone is welcome to contribute. 
 
 ## Licensing
-Copyright 2012 Esri
+Copyright 2013 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
