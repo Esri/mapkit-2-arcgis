@@ -1,6 +1,6 @@
 /*
-     File: main.m 
- Abstract: Main source file to this sample application. 
+     File: AppDelegate.m 
+ Abstract: The application delegate class used for installing our navigation controller. 
   Version: 1.3 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
@@ -43,17 +43,24 @@
   
  Copyright (C) 2012 Apple Inc. All Rights Reserved. 
   
- */
-
-#import <UIKit/UIKit.h>
+ */ 
 
 #import "AppDelegate.h"
+#import "MapViewController.h"
 
-int main(int argc, char *argv[])
+@interface AppDelegate ()
+@property (nonatomic, strong) IBOutlet UINavigationController *myNavController;
+@end
+
+@implementation AppDelegate;
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application
 {
-    int retVal = 0;
-    @autoreleasepool {
-        retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-    return retVal;
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    _window = [[UIWindow alloc] initWithFrame:screenBounds];
+    
+    [self.window addSubview:self.myNavController.view];
+    [self.window makeKeyAndVisible];
 }
+
+@end

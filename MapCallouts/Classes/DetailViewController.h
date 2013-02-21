@@ -1,6 +1,6 @@
 /*
-     File: main.m 
- Abstract: Main source file to this sample application. 
+     File: DetailViewController.h 
+ Abstract: The detail view controller used for displaying the Golden Gate Bridge. 
   Version: 1.3 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
@@ -47,13 +47,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AppDelegate.h"
+@interface DetailViewController : UIViewController
 
-int main(int argc, char *argv[])
-{
-    int retVal = 0;
-    @autoreleasepool {
-        retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-    return retVal;
-}
+@end

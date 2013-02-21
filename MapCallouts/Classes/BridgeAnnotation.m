@@ -1,6 +1,6 @@
 /*
-     File: main.m 
- Abstract: Main source file to this sample application. 
+     File: BridgeAnnotation.m 
+ Abstract: The custom MKAnnotation object representing the Golden Gate Bridge. 
   Version: 1.3 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
@@ -45,15 +45,28 @@
   
  */
 
-#import <UIKit/UIKit.h>
+#import "BridgeAnnotation.h"
 
-#import "AppDelegate.h"
+@implementation BridgeAnnotation
 
-int main(int argc, char *argv[])
+- (CLLocationCoordinate2D)coordinate;
 {
-    int retVal = 0;
-    @autoreleasepool {
-        retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-    return retVal;
+    CLLocationCoordinate2D theCoordinate;
+    theCoordinate.latitude = 37.810000;
+    theCoordinate.longitude = -122.477989;
+    return theCoordinate; 
 }
+
+// required if you set the MKPinAnnotationView's "canShowCallout" property to YES
+- (NSString *)title
+{
+    return @"Golden Gate Bridge";
+}
+
+// optional
+- (NSString *)subtitle
+{
+    return @"Opened: May 27, 1937";
+}
+
+@end

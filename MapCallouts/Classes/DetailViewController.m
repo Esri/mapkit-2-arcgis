@@ -1,6 +1,6 @@
 /*
-     File: main.m 
- Abstract: Main source file to this sample application. 
+     File: DetailViewController.m 
+ Abstract: The detail view controller used for displaying the Golden Gate Bridge. 
   Version: 1.3 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
@@ -45,15 +45,19 @@
   
  */
 
-#import <UIKit/UIKit.h>
+#import "DetailViewController.h"
 
-#import "AppDelegate.h"
+@implementation DetailViewController
 
-int main(int argc, char *argv[])
+- (void)viewWillAppear:(BOOL)animated
 {
-    int retVal = 0;
-    @autoreleasepool {
-        retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-    return retVal;
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
+}
+
+@end

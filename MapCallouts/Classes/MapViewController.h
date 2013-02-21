@@ -1,6 +1,6 @@
 /*
-     File: main.m 
- Abstract: Main source file to this sample application. 
+     File: MapViewController.h 
+ Abstract: The primary view controller containing the MKMapView, adding and removing both MKPinAnnotationViews through its toolbar. 
   Version: 1.3 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
@@ -46,14 +46,8 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-#import "AppDelegate.h"
+@interface MapViewController : UIViewController <MKMapViewDelegate>
 
-int main(int argc, char *argv[])
-{
-    int retVal = 0;
-    @autoreleasepool {
-        retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-    return retVal;
-}
+@end

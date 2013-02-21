@@ -1,6 +1,6 @@
 /*
-     File: main.m 
- Abstract: Main source file to this sample application. 
+     File: SFAnnotation.m 
+ Abstract: The custom MKAnnotation object representing the city of San Francisco. 
   Version: 1.3 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
@@ -45,15 +45,27 @@
   
  */
 
-#import <UIKit/UIKit.h>
+#import "SFAnnotation.h"
 
-#import "AppDelegate.h"
+@implementation SFAnnotation 
 
-int main(int argc, char *argv[])
+- (CLLocationCoordinate2D)coordinate;
 {
-    int retVal = 0;
-    @autoreleasepool {
-        retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-    return retVal;
+    CLLocationCoordinate2D theCoordinate;
+    theCoordinate.latitude = 37.786996;
+    theCoordinate.longitude = -122.419281;
+    return theCoordinate; 
 }
+
+- (NSString *)title
+{
+    return @"San Francisco";
+}
+
+// optional
+- (NSString *)subtitle
+{
+    return @"Founded: June 29, 1776";
+}
+
+@end

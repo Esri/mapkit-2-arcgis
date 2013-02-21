@@ -12,7 +12,6 @@
 
 @implementation MKMapView
 
-
 - (void)setRegion:(MKCoordinateRegion)region
 {
     self.layerDelegate = self;
@@ -29,13 +28,15 @@
             url = [NSURL URLWithString: @"http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"];
             break;
         default:
+            url = [NSURL URLWithString: @"http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"];
             break;
     }
 
-    AGSTiledMapServiceLayer* layer = [AGSTiledMapServiceLayer tiledMapServiceLayerWithURL: url];
-    [self addMapLayer:layer withName:@"basemap"];
-    
-    self.savedRegion = region;
+    if (! [self mapLayerForName:@"basemap"])
+    {
+        AGSTiledMapServiceLayer* layer = [AGSTiledMapServiceLayer tiledMapServiceLayerWithURL: url];
+        [self insertMapLayer:layer withName:@"basemap" atIndex:0];
+    }
 }
 
 - (void)setRegion:(MKCoordinateRegion)region animated:(BOOL)bAnimated
@@ -67,32 +68,23 @@
 - (void)setCenterCoordinate:(CLLocationCoordinate2D)coordinate animated:(BOOL)animated
 {
     AGSPoint *centerPoint = [[AGSPoint alloc] initWithX:coordinate.longitude y:coordinate.latitude spatialReference:[AGSSpatialReference wgs84SpatialReference]];
-    
     [self centerAtPoint:centerPoint animated:animated];
 }
-
 
 - (void)mapViewDidLoad:(AGSMapView *)mapView
 {
     self.idtoannotationDictionary = [[NSMutableDictionary alloc] init];
     self.annotationGraphicsLayer = [AGSGraphicsLayer graphicsLayer];
-    [self addMapLayer:self.annotationGraphicsLayer withName:@"Annotation Graphics Layer"];
     
- //   AGSPoint *wgs84Point = [[AGSPoint alloc] initWithX:self.savedRegion.center.longitude y:self.savedRegion.center.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
+    if ( ![self mapLayerForName:@"Annotation Graphics Layer"])
+        [self addMapLayer:self.annotationGraphicsLayer withName:@"Annotation Graphics Layer"];
     
     AGSGeometryEngine *engine = [AGSGeometryEngine defaultGeometryEngine];
     AGSPoint *webMercatorPoint = (AGSPoint*)[engine projectGeometry:self.wgs84Point toSpatialReference:self.spatialReference];
     
     [self zoomIn:YES];
-    //[self zoomToResolution:60 withCenterPoint:webMercatorPoint animated:shouldAnimate];
-    [self centerAtPoint:webMercatorPoint animated:shouldAnimate];
-    
-    if ( self.savedRegion.span.latitudeDelta > 0) {
-        AGSMutablePolygon * wg84Poly = [engine bufferGeometry:self.wgs84Point byDistance:(self.savedRegion.span.latitudeDelta + self.savedRegion.span.longitudeDelta / 2)];
-        AGSGeometry *webMercatorPoly = [engine projectGeometry:wg84Poly toSpatialReference:self.spatialReference];
-        
-        [self zoomToEnvelope:webMercatorPoly.envelope animated:NO];
-    }
+    [self zoomToResolution:30 withCenterPoint:webMercatorPoint animated:shouldAnimate];
+    //[self centerAtPoint:webMercatorPoint animated:shouldAnimate];
 
     if ( self.showsUserLocation)
     {
@@ -118,7 +110,7 @@
 	watermarkIV.image = [UIImage imageNamed:@"esriLogo.png"];
 	watermarkIV.userInteractionEnabled = NO;
     
-	[mapView.superview addSubview:watermarkIV];
+	//[mapView.superview addSubview:watermarkIV];
     
 }
 //- (CGPoint)convertCoordinate:(CLLocationCoordinate2D)coordinate toPointToView:(UIView *)view
@@ -238,7 +230,7 @@
     CLLocationCoordinate2D coordinates = [overlay coordinate];
     
     AGSPoint* markerPoint = [AGSPoint pointWithX:coordinates.longitude y:coordinates.latitude spatialReference:[AGSSpatialReference spatialReferenceWithWKID:4326]];
-    AGSPoint* newMarkerPoint = (AGSPoint*) [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:[AGSSpatialReference spatialReferenceWithWKID:102100]];
+    AGSPoint* newMarkerPoint = [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:[AGSSpatialReference spatialReferenceWithWKID:102100]];
     
     if ( self.annotationGraphicsLayer == nil ) {
         self.annotationGraphicsLayer = [AGSGraphicsLayer graphicsLayer];

@@ -1,6 +1,6 @@
 /*
-     File: main.m 
- Abstract: Main source file to this sample application. 
+     File: SFAnnotation.h 
+ Abstract: The custom MKAnnotation object representing the city of San Francisco. 
   Version: 1.3 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
@@ -45,15 +45,10 @@
   
  */
 
-#import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-#import "AppDelegate.h"
+@interface SFAnnotation : NSObject <MKAnnotation>
 
-int main(int argc, char *argv[])
-{
-    int retVal = 0;
-    @autoreleasepool {
-        retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-    return retVal;
-}
+@end
+
+
