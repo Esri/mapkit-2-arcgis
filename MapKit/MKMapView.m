@@ -60,9 +60,11 @@
         default:
             break;
     }
-    
-    AGSTiledMapServiceLayer* layer = [AGSTiledMapServiceLayer tiledMapServiceLayerWithURL: url];
-    [self addMapLayer:layer withName:@"basemap"];
+    if (! [self mapLayerForName:@"basemap"])
+    {
+        AGSTiledMapServiceLayer* layer = [AGSTiledMapServiceLayer tiledMapServiceLayerWithURL: url];
+        [self addMapLayer:layer withName:@"basemap"];
+    }
 }
 
 - (void)setCenterCoordinate:(CLLocationCoordinate2D)coordinate animated:(BOOL)animated
@@ -84,7 +86,7 @@
     
     [self zoomIn:YES];
     [self zoomToResolution:30 withCenterPoint:webMercatorPoint animated:shouldAnimate];
-    //[self centerAtPoint:webMercatorPoint animated:shouldAnimate];
+   // [self centerAtPoint:webMercatorPoint animated:shouldAnimate];
 
     if ( self.showsUserLocation)
     {
@@ -110,7 +112,7 @@
 	watermarkIV.image = [UIImage imageNamed:@"esriLogo.png"];
 	watermarkIV.userInteractionEnabled = NO;
     
-	//[mapView.superview addSubview:watermarkIV];
+	[mapView.superview addSubview:watermarkIV];
     
 }
 //- (CGPoint)convertCoordinate:(CLLocationCoordinate2D)coordinate toPointToView:(UIView *)view
@@ -129,14 +131,15 @@
                       ofObject:(id)object
                         change:(NSDictionary *)change
                        context:(void *)context {
-    if ([keyPath isEqual:@"currentLocation"])
+    if ([keyPath isEqual:@"location"])
     {
-        //self.userLocation.location = [[CLLocation alloc] initWithLatitude:self.gps.currentLocation.coordinate.latitude longitude:self.gps.currentLocation.coordinate.longitude];
-        MKUserLocation *userLocation = [[MKUserLocation alloc] init];
+        CLLocation* loc = [[CLLocation alloc] initWithLatitude:self.locationDisplay.location.point.y longitude:self.locationDisplay.location.point.x];
+        
         self.userLocation = [[MKUserLocation alloc] init];
-        self.userLocation.location = self.locationDisplay.location;
-        userLocation.location = self.locationDisplay.location;
-        [self.delegate mapView:self didUpdateUserLocation:userLocation];
+        self.userLocation.location = loc;
+
+        // self.userLocation.location.point = self.locationDisplay.location.point;
+        [self.delegate mapView:self didUpdateUserLocation:self.userLocation];
     }
 }
 

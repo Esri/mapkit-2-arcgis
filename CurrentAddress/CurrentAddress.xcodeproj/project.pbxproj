@@ -20,7 +20,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MapViewController.m */; };
-		300A082B10360561009C9A1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300A082A10360561009C9A1C /* MapKit.framework */; };
 		300A08571036093B009C9A1C /* PlacemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 300A08551036093B009C9A1C /* PlacemarkViewController.m */; };
 		531978C116289A31009FACF4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531978BF16289A31009FACF4 /* MainStoryboard.storyboard */; };
 		53737846161F471A0056C889 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53737843161F471A0056C889 /* Default-568h@2x.png */; };
@@ -47,6 +46,7 @@
 		E2C23E4416D6F60900274FDA /* MKPlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E3416D6F60900274FDA /* MKPlaceMark.m */; };
 		E2C23E4516D6F60900274FDA /* MKUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E3716D6F60900274FDA /* MKUserLocation.m */; };
 		E2C23E4616D6F60900274FDA /* esriLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C23E3A16D6F60900274FDA /* esriLogo@2x.png */; };
+		E2C23E4916D82F9F00274FDA /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2C23E4816D82F9F00274FDA /* ArcGIS.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +114,7 @@
 		E2C23E3716D6F60900274FDA /* MKUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUserLocation.m; sourceTree = "<group>"; };
 		E2C23E3816D6F60900274FDA /* MKUserTrackingMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUserTrackingMode.h; sourceTree = "<group>"; };
 		E2C23E3A16D6F60900274FDA /* esriLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "esriLogo@2x.png"; sourceTree = "<group>"; };
+		E2C23E4816D82F9F00274FDA /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = ../../../../../Library/SDKs/ArcGIS/iOS/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +126,6 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
-				300A082B10360561009C9A1C /* MapKit.framework in Frameworks */,
 				E2C23E1416D6F5E500274FDA /* CoreText.framework in Frameworks */,
 				E2C23E1516D6F5E500274FDA /* MediaPlayer.framework in Frameworks */,
 				E2C23E1616D6F5E500274FDA /* MobileCoreServices.framework in Frameworks */,
@@ -200,6 +200,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2C23E4816D82F9F00274FDA /* ArcGIS.bundle */,
 				E2C23E1B16D6F5F200274FDA /* libz.dylib */,
 				E2C23E0D16D6F5E500274FDA /* CoreText.framework */,
 				E2C23E0E16D6F5E500274FDA /* MediaPlayer.framework */,
@@ -327,6 +328,7 @@
 				531978C116289A31009FACF4 /* MainStoryboard.storyboard in Resources */,
 				E2C23E3D16D6F60900274FDA /* AnnotationViewController.xib in Resources */,
 				E2C23E4616D6F60900274FDA /* esriLogo@2x.png in Resources */,
+				E2C23E4916D82F9F00274FDA /* ArcGIS.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

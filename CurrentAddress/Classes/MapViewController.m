@@ -59,11 +59,24 @@
 
 @implementation MapViewController
 
+- (void)gotoLocation
+{
+    // start off by default in San Francisco
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 37.786996;
+    newRegion.center.longitude = -122.440100;
+    newRegion.span.latitudeDelta = 0.112872;
+    newRegion.span.longitudeDelta = 0.109863;
+    
+    [self.mapView setRegion:newRegion animated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.mapView.showsUserLocation = YES;
+   [self gotoLocation];
     
     self.geocoder = [[CLGeocoder alloc] init];
     
@@ -84,6 +97,7 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
+
     [self.geocoder reverseGeocodeLocation:self.mapView.userLocation.location completionHandler:^(NSArray *placemarks, NSError *error) {
         _placemark = [placemarks objectAtIndex:0];
         

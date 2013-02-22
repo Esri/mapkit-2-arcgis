@@ -20,7 +20,7 @@
 @property (readonly, nonatomic, getter=isUpdating) BOOL updating;
 
 // Returns nil if the owning MKMapView's showsUserLocation is NO or the user's location has yet to be determined.
-@property ( nonatomic, copy) AGSLocation *location;
+@property ( nonatomic, strong) CLLocation *location;
 
 // Returns nil if not in MKUserTrackingModeFollowWithHeading
 @property (readonly, nonatomic, retain) CLHeading *heading NS_AVAILABLE(NA, 5_0);

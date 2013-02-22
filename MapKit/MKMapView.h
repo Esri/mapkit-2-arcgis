@@ -101,7 +101,11 @@
 
 @protocol MKMapViewDelegate <NSObject>
 
+@optional
+- (void)mapViewWillStartLoadingMap:(MKMapView *)mapView;
 - (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView;
+- (void)mapViewDidFailLoadingMap:(MKMapView *)mapView withError:(NSError *)error;
+
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation;
 
 
