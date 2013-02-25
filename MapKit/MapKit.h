@@ -17,6 +17,9 @@
 #import "MKPinAnnotationView.h"
 #import "MKUserLocation.h"
 #import "MKPlaceMark.h"
+#import "MKCircle.h"
+#import "MKShape.h"
+#import "MKCircleView.h"
 //#import "MKGeometry.h"
 
 

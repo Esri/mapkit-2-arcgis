@@ -18,6 +18,8 @@
 #import "MKPinAnnotationView.h"
 #import "AnnotationTemplate.h"
 #import "MKUserLocation.h"
+#import "MKCircle.h"
+#import "MKCircleView.h"
 
 
 @protocol MKMapViewDelegate;
