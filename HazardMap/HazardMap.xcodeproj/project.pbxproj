@@ -27,11 +27,12 @@
 		53ACD36F11F6408700EA03E3 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 53ACD36811F6408700EA03E3 /* iTunesArtwork */; };
 		53F418A311F6088C00740D86 /* HazardMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F4189F11F6088C00740D86 /* HazardMapViewController.xib */; };
 		53F418A411F6088C00740D86 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F418A111F6088C00740D86 /* MainWindow.xib */; };
+		88D2ECDB16DC251E004B4C45 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D2ECDA16DC251E004B4C45 /* libc++.dylib */; };
+		88D2ECDD16DC2523004B4C45 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D2ECDC16DC2523004B4C45 /* OpenGLES.framework */; };
 		E259EAF2167FE02700E30AC9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E259EAEB167FE02700E30AC9 /* Security.framework */; };
 		E259EAF3167FE02700E30AC9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E259EAEC167FE02700E30AC9 /* libz.dylib */; };
 		E259EAF4167FE02700E30AC9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E259EAED167FE02700E30AC9 /* MobileCoreServices.framework */; };
 		E259EAF5167FE02700E30AC9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E259EAEE167FE02700E30AC9 /* MediaPlayer.framework */; };
-		E259EAF6167FE02700E30AC9 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E259EAEF167FE02700E30AC9 /* libstdc++.dylib */; };
 		E259EAF7167FE02700E30AC9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E259EAF0167FE02700E30AC9 /* CoreText.framework */; };
 		E259EAF8167FE02700E30AC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E259EAF1167FE02700E30AC9 /* QuartzCore.framework */; };
 		E2D56F741681202200FF14AC /* AnnotationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D56F581681202200FF14AC /* AnnotationTemplate.m */; };
@@ -78,6 +79,8 @@
 		53F418A011F6088C00740D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HazardMapViewController.xib; sourceTree = "<group>"; };
 		53F418A211F6088C00740D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		53FD493C11F61F2A00222043 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		88D2ECDA16DC251E004B4C45 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		88D2ECDC16DC2523004B4C45 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* HazardMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HazardMap-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		E259EAEB167FE02700E30AC9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E259EAEC167FE02700E30AC9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -128,6 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D2ECDD16DC2523004B4C45 /* OpenGLES.framework in Frameworks */,
+				88D2ECDB16DC251E004B4C45 /* libc++.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -136,7 +141,6 @@
 				E259EAF3167FE02700E30AC9 /* libz.dylib in Frameworks */,
 				E259EAF4167FE02700E30AC9 /* MobileCoreServices.framework in Frameworks */,
 				E259EAF5167FE02700E30AC9 /* MediaPlayer.framework in Frameworks */,
-				E259EAF6167FE02700E30AC9 /* libstdc++.dylib in Frameworks */,
 				E259EAF7167FE02700E30AC9 /* CoreText.framework in Frameworks */,
 				E259EAF8167FE02700E30AC9 /* QuartzCore.framework in Frameworks */,
 			);
@@ -180,6 +184,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				88D2ECDC16DC2523004B4C45 /* OpenGLES.framework */,
+				88D2ECDA16DC251E004B4C45 /* libc++.dylib */,
 				E2D56F561681202200FF14AC /* MapKit */,
 				53FD493C11F61F2A00222043 /* ReadMe.txt */,
 				080E96DDFE201D6D7F000001 /* Classes */,

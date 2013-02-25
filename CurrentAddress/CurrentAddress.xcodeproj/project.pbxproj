@@ -46,7 +46,6 @@
 		E2C23E4416D6F60900274FDA /* MKPlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E3416D6F60900274FDA /* MKPlaceMark.m */; };
 		E2C23E4516D6F60900274FDA /* MKUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E3716D6F60900274FDA /* MKUserLocation.m */; };
 		E2C23E4616D6F60900274FDA /* esriLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C23E3A16D6F60900274FDA /* esriLogo@2x.png */; };
-		E2C23E4916D82F9F00274FDA /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2C23E4816D82F9F00274FDA /* ArcGIS.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,7 +113,6 @@
 		E2C23E3716D6F60900274FDA /* MKUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUserLocation.m; sourceTree = "<group>"; };
 		E2C23E3816D6F60900274FDA /* MKUserTrackingMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUserTrackingMode.h; sourceTree = "<group>"; };
 		E2C23E3A16D6F60900274FDA /* esriLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "esriLogo@2x.png"; sourceTree = "<group>"; };
-		E2C23E4816D82F9F00274FDA /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = ../../../../../Library/SDKs/ArcGIS/iOS/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,7 +198,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2C23E4816D82F9F00274FDA /* ArcGIS.bundle */,
 				E2C23E1B16D6F5F200274FDA /* libz.dylib */,
 				E2C23E0D16D6F5E500274FDA /* CoreText.framework */,
 				E2C23E0E16D6F5E500274FDA /* MediaPlayer.framework */,
@@ -328,7 +325,6 @@
 				531978C116289A31009FACF4 /* MainStoryboard.storyboard in Resources */,
 				E2C23E3D16D6F60900274FDA /* AnnotationViewController.xib in Resources */,
 				E2C23E4616D6F60900274FDA /* esriLogo@2x.png in Resources */,
-				E2C23E4916D82F9F00274FDA /* ArcGIS.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,3 +28,11 @@ MapCallouts/.DS_Store
 >>>>>>> sync to get the lastest
 
 CurrentAddress/.DS_Store
+
+*.xcuserstate
+
+.DS_Store
+
+Regions/.DS_Store
+
+*.xcuserstate
