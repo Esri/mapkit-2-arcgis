@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <MapKit/MKAnnotation.h>
-//#import <MapKit/MKFoundation.h>
 #import <CoreLocation/CLLocation.h>
 #import <CoreLocation/CLPlacemark.h>
 #import "MapKit.h"

@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MKAnnotation.h"
-//#import <MapKit/MapKit.h>
+
 
 
 enum {
@@ -22,7 +22,7 @@ typedef NSUInteger MKAnnotationViewDragState;
 @interface MKAnnotationView : UIView
 {
 @private
-    //MKAnnotationViewInternal *_internal;
+   
 }
 
 - (id)initWithAnnotation:(id <MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier;

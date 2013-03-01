@@ -60,7 +60,7 @@
 - (BOOL)canDrawMapRect:(MKMapRect)mapRect
              zoomScale:(MKZoomScale)zoomScale
 {
-    //#warning not implemented
+    
     return NO;
 }
 
@@ -68,7 +68,7 @@
           zoomScale:(MKZoomScale)zoomScale
           inContext:(CGContextRef)context
 {
-//    #warning not implemented
+
     CGRect boundaryRect =[self rectForMapRect:mapRect];
     CGContextFillRect(context, boundaryRect);
 }

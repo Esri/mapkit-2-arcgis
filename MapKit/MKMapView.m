@@ -8,7 +8,6 @@
 
 #import "MKMapView.h"
 
-#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
 
 @implementation MKMapView
 
@@ -103,7 +102,7 @@
 	// that way.
     
     CGFloat bottomY = 350;
-    if ( IS_IPHONE5 == YES)
+    if ( AGSDeviceMachineTypeiPhone5 == YES)
         bottomY = 440;
     
 	UIImageView *watermarkIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, bottomY, 43, 25)];
@@ -138,7 +137,6 @@
         self.userLocation = [[MKUserLocation alloc] init];
         self.userLocation.location = loc;
 
-        // self.userLocation.location.point = self.locationDisplay.location.point;
         [self.delegate mapView:self didUpdateUserLocation:self.userLocation];
     }
 }

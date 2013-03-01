@@ -5,7 +5,7 @@
 //  Copyright (c) 2009-2012, Apple Inc. All rights reserved.
 //
 
-//#import <MapKit/MKAnnotationView.h>
+
 #import "MapKit.h"
 #import "MKAnnotationView.h"
 

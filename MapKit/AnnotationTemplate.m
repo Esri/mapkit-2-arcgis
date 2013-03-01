@@ -21,7 +21,7 @@
         self.anvc.leftView = self.leftView;
     if ( self.rightView)
         self.anvc.rightView = self.rightView;
-//    [self.anvc setGraphics];
+
     
     return self.anvc.view;
     
