@@ -37,7 +37,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 
 ## Contributing
 
-Anyone and everyone is welcome to contribute. 
+Anyone and everyone is welcome to contribute. We do accept pull requests.
 
 ## Licensing
 Copyright 2013 Esri
@@ -54,7 +54,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt]( https://raw.github.com/Esri/switch-basemaps-js/master/license.txt) file.
+A copy of the license is available in the repository's [license.txt]( https://raw.github.com/Esri/mapkit-2-arcgis/master/license.txt) file.
 
 [](Esri Tags: iOS MapKit 2 ArcGIS)
 [](Esri Language: Objective-C)
