@@ -33,6 +33,7 @@
 @property (nonatomic, assign) id <MKMapViewDelegate> delegate;
 @property ( nonatomic, strong) NSMutableDictionary* idtoannotationDictionary;
 @property ( nonatomic, strong) AGSGraphicsLayer* annotationGraphicsLayer;
+@property (nonatomic,strong) AnnotationTemplate* templateAnnotation;
 // Changing the map type or region can cause the map to start loading map content.
 // The loading delegate methods will be called as map content is loaded.
 @property (nonatomic) MKMapType mapType;

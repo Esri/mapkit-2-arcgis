@@ -178,23 +178,23 @@
    AGSPoint* newMarkerPoint = [[AGSGeometryEngine defaultGeometryEngine] projectGeometry:markerPoint toSpatialReference:[AGSSpatialReference spatialReferenceWithWKID:102100]];
    AGSGraphic* myGraphic = [AGSGraphic graphicWithGeometry:newMarkerPoint symbol:pictureMarkerSymbol attributes:nil infoTemplateDelegate:nil];
     
-    AnnotationTemplate* template = [[AnnotationTemplate alloc] init];
+    self.templateAnnotation = [[AnnotationTemplate alloc] init];
     if ( [annotation respondsToSelector:@selector(title)])
-        template.title = annotation.title;
+        self.templateAnnotation.title = annotation.title;
     if ( [annotation respondsToSelector:@selector(subtitle)])
-        template.subtitle = annotation.subtitle;
+        self.templateAnnotation.subtitle = annotation.subtitle;
     if ( pinAnnotationView.leftCalloutAccessoryView)
     {
-        template.leftView =  [[UIView alloc] initWithFrame:pinAnnotationView.leftCalloutAccessoryView.frame];
-        template.leftView = pinAnnotationView.leftCalloutAccessoryView;
+        self.templateAnnotation.leftView =  [[UIView alloc] initWithFrame:pinAnnotationView.leftCalloutAccessoryView.frame];
+        self.templateAnnotation.leftView = pinAnnotationView.leftCalloutAccessoryView;
         //template.image = imageView.image;
     }
     
     if ( pinAnnotationView.rightCalloutAccessoryView)
     {
-        template.rightView = pinAnnotationView.rightCalloutAccessoryView;
+        self.templateAnnotation.rightView = pinAnnotationView.rightCalloutAccessoryView;
     }
-   myGraphic.infoTemplateDelegate = template;
+   myGraphic.infoTemplateDelegate = self.templateAnnotation;
    [self.annotationGraphicsLayer addGraphic:myGraphic];
    [self.annotationGraphicsLayer refresh];
     
