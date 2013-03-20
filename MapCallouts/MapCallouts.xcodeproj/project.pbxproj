@@ -48,7 +48,6 @@
 		E28FFE2F16D43556009EA48B /* AnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28FFE1416D43556009EA48B /* AnnotationViewController.xib */; };
 		E28FFE3116D43556009EA48B /* MKGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FFE1C16D43556009EA48B /* MKGeometry.m */; };
 		E28FFE3216D43556009EA48B /* MKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FFE1E16D43556009EA48B /* MKMapView.m */; };
-		E28FFE3316D43556009EA48B /* MKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FFE2016D43556009EA48B /* MKOverlay.m */; };
 		E28FFE3416D43556009EA48B /* MKOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FFE2216D43556009EA48B /* MKOverlayView.m */; };
 		E28FFE3616D43556009EA48B /* MKPlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FFE2616D43556009EA48B /* MKPlaceMark.m */; };
 		E28FFE3716D43556009EA48B /* MKUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FFE2916D43556009EA48B /* MKUserLocation.m */; };
@@ -124,7 +123,6 @@
 		E28FFE1D16D43556009EA48B /* MKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
 		E28FFE1E16D43556009EA48B /* MKMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapView.m; sourceTree = "<group>"; };
 		E28FFE1F16D43556009EA48B /* MKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlay.h; sourceTree = "<group>"; };
-		E28FFE2016D43556009EA48B /* MKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlay.m; sourceTree = "<group>"; };
 		E28FFE2116D43556009EA48B /* MKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlayView.h; sourceTree = "<group>"; };
 		E28FFE2216D43556009EA48B /* MKOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlayView.m; sourceTree = "<group>"; };
 		E28FFE2316D43556009EA48B /* MKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPinAnnotationView.h; sourceTree = "<group>"; };
@@ -301,7 +299,6 @@
 				E28FFE1D16D43556009EA48B /* MKMapView.h */,
 				E28FFE1E16D43556009EA48B /* MKMapView.m */,
 				E28FFE1F16D43556009EA48B /* MKOverlay.h */,
-				E28FFE2016D43556009EA48B /* MKOverlay.m */,
 				E28FFE2116D43556009EA48B /* MKOverlayView.h */,
 				E28FFE2216D43556009EA48B /* MKOverlayView.m */,
 				E28FFE2316D43556009EA48B /* MKPinAnnotationView.h */,
@@ -422,7 +419,6 @@
 				E28FFE2E16D43556009EA48B /* AnnotationViewController.m in Sources */,
 				E28FFE3116D43556009EA48B /* MKGeometry.m in Sources */,
 				E28FFE3216D43556009EA48B /* MKMapView.m in Sources */,
-				E28FFE3316D43556009EA48B /* MKOverlay.m in Sources */,
 				E28FFE3416D43556009EA48B /* MKOverlayView.m in Sources */,
 				E28FFE3616D43556009EA48B /* MKPlaceMark.m in Sources */,
 				E28FFE3716D43556009EA48B /* MKUserLocation.m in Sources */,
