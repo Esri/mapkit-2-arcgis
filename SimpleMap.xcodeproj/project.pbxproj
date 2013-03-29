@@ -33,7 +33,6 @@
 		887F76351683893D009D58BA /* MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F761D1683893D009D58BA /* MKAnnotationView.m */; };
 		887F76361683893D009D58BA /* MKGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F76211683893D009D58BA /* MKGeometry.m */; };
 		887F76371683893D009D58BA /* MKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F76231683893D009D58BA /* MKMapView.m */; };
-		887F76381683893D009D58BA /* MKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F76251683893D009D58BA /* MKOverlay.m */; };
 		887F76391683893D009D58BA /* MKOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F76271683893D009D58BA /* MKOverlayView.m */; };
 		887F763A1683893D009D58BA /* MKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F76291683893D009D58BA /* MKPinAnnotationView.m */; };
 		887F763B1683893D009D58BA /* MKPlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F762B1683893D009D58BA /* MKPlaceMark.m */; };
@@ -85,7 +84,6 @@
 		887F76221683893D009D58BA /* MKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
 		887F76231683893D009D58BA /* MKMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapView.m; sourceTree = "<group>"; };
 		887F76241683893D009D58BA /* MKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlay.h; sourceTree = "<group>"; };
-		887F76251683893D009D58BA /* MKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlay.m; sourceTree = "<group>"; };
 		887F76261683893D009D58BA /* MKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlayView.h; sourceTree = "<group>"; };
 		887F76271683893D009D58BA /* MKOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlayView.m; sourceTree = "<group>"; };
 		887F76281683893D009D58BA /* MKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPinAnnotationView.h; sourceTree = "<group>"; };
@@ -207,7 +205,6 @@
 				887F76221683893D009D58BA /* MKMapView.h */,
 				887F76231683893D009D58BA /* MKMapView.m */,
 				887F76241683893D009D58BA /* MKOverlay.h */,
-				887F76251683893D009D58BA /* MKOverlay.m */,
 				887F76261683893D009D58BA /* MKOverlayView.h */,
 				887F76271683893D009D58BA /* MKOverlayView.m */,
 				887F76281683893D009D58BA /* MKPinAnnotationView.h */,
@@ -307,7 +304,6 @@
 				887F76351683893D009D58BA /* MKAnnotationView.m in Sources */,
 				887F76361683893D009D58BA /* MKGeometry.m in Sources */,
 				887F76371683893D009D58BA /* MKMapView.m in Sources */,
-				887F76381683893D009D58BA /* MKOverlay.m in Sources */,
 				887F76391683893D009D58BA /* MKOverlayView.m in Sources */,
 				887F763A1683893D009D58BA /* MKPinAnnotationView.m in Sources */,
 				887F763B1683893D009D58BA /* MKPlaceMark.m in Sources */,

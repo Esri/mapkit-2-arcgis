@@ -72,6 +72,9 @@
 - (void)removeAnnotations:(NSArray *)annotations;
 //- (CGPoint)convertCoordinate:(CLLocationCoordinate2D)coordinate toPointToView:(UIView *)view;
 
+- (void)setZoomEnable:(BOOL)enabled;
+- (void)setScrollEnable:(BOOL)enabled;
+
 @property (nonatomic, readonly) NSArray *annotations;
 - (NSSet *)annotationsInMapRect:(MKMapRect)mapRect NS_AVAILABLE(NA, 4_2);
 

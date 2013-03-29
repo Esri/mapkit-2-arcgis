@@ -127,6 +127,16 @@
 //    return [self convertCoordinate:coordinate toPointToView:view];
 //}
 
+
+- (void)setZoomEnable:(BOOL)enabled
+{
+    
+}
+- (void)setScrollEnable:(BOOL)enabled
+{
+    
+}
+
 - (void)registerAsObserver {
     [ self.locationDisplay addObserver:self
                         forKeyPath:@"location"
