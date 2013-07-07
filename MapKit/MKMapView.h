@@ -55,6 +55,9 @@
 
 // Access the visible region of the map in projected coordinates.
 @property (nonatomic) MKMapRect visibleMapRect;
+
+- (CLLocationCoordinate2D)convertPoint:(CGPoint)point toCoordinateFromView:(UIView *)view;
+- (void)setShowsUserLocation;
 - (void)setVisibleMapRect:(MKMapRect)mapRect animated:(BOOL)animate;
 
 - (void)setRegion:(MKCoordinateRegion)region;

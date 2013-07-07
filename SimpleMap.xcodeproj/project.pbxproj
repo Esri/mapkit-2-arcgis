@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8808086B1789C2F700CDDBBE /* MKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8808086A1789C2F700CDDBBE /* MKPointAnnotation.m */; };
 		885197561625F8E400EEF3F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885197551625F8E400EEF3F9 /* UIKit.framework */; };
 		885197581625F8E400EEF3F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885197571625F8E400EEF3F9 /* Foundation.framework */; };
 		8851975A1625F8E400EEF3F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885197591625F8E400EEF3F9 /* CoreGraphics.framework */; };
@@ -41,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880808691789C2F700CDDBBE /* MKPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPointAnnotation.h; sourceTree = "<group>"; };
+		8808086A1789C2F700CDDBBE /* MKPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPointAnnotation.m; sourceTree = "<group>"; };
 		8829661616976E7100420E1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		885197511625F8E400EEF3F9 /* SimpleMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885197551625F8E400EEF3F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -189,6 +192,8 @@
 		887F76141683893D009D58BA /* MapKit */ = {
 			isa = PBXGroup;
 			children = (
+				880808691789C2F700CDDBBE /* MKPointAnnotation.h */,
+				8808086A1789C2F700CDDBBE /* MKPointAnnotation.m */,
 				887F76151683893D009D58BA /* AnnotationTemplate.h */,
 				887F76161683893D009D58BA /* AnnotationTemplate.m */,
 				887F76171683893D009D58BA /* AnnotationViewController.h */,
@@ -308,6 +313,7 @@
 				887F763A1683893D009D58BA /* MKPinAnnotationView.m in Sources */,
 				887F763B1683893D009D58BA /* MKPlaceMark.m in Sources */,
 				887F763C1683893D009D58BA /* MKUserLocation.m in Sources */,
+				8808086B1789C2F700CDDBBE /* MKPointAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

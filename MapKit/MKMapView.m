@@ -19,6 +19,22 @@
 
 @implementation MKMapView
 
+- (CLLocationCoordinate2D)convertPoint:(CGPoint)point toCoordinateFromView:(UIView *)view
+{
+    CLLocationCoordinate2D coordinates;
+    
+    coordinates.latitude = point.x;
+    coordinates.longitude = point.y;
+    
+    return coordinates;
+}
+
+- (void)setShowsUserLocation
+{
+    [self.locationDisplay startDataSource];
+    
+}
+
 - (void)setRegion:(MKCoordinateRegion)region
 {
     self.layerDelegate = self;
