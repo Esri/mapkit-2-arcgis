@@ -4,9 +4,9 @@ MapKit 2 ArcGIS
 
 This solution migrates MapKit to ArcGIS without code changes.
 
-The demo was developed for the iPhone using the ArcGIS Runtime SDK for iOS 10.1.1, xCode 4.6 (with Automatic Reference Counting) and iOS 6.1. 
+The demo was developed for the iPhone using the ArcGIS Runtime SDK for iOS 10.2.2, xCode 5.1 (with Automatic Reference Counting) and iOS 6.1. 
 
-![App](https://raw.github.com/Esri/mapkit-2-arcgis/master/image.png?login=alpascual&token=b3f3ec78a131fc49e37c6662a7372be6)
+
 
 ## Features
 * All the features for MapKit.
@@ -21,13 +21,13 @@ The demo was developed for the iPhone using the ArcGIS Runtime SDK for iOS 10.1.
 
 ## Requirements
 
-* xCode 4.3 and above
+* xCode 4 and above
 * A little background with iPhone development and Objective-C
 * Experience with the [ArcGIS Runtime SDK for iOS](http://www.esri.com/) would help.
 
 ## Resources
 
-* [ArcGIS Runtime SDK for iOS](http://resources.arcgis.com/en/communities/runtime-ios-sdk/)
+* [ArcGIS Runtime SDK for iOS](https://developers.arcgis.com/ios/)
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 * [twitter@arcgis_runtime](http://twitter.com/arcgis_runtime)
 
@@ -40,7 +40,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 Anyone and everyone is welcome to contribute. We do accept pull requests.
 
 ## Licensing
-Copyright 2013 Esri
+Copyright 2014 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -56,5 +56,5 @@ limitations under the License.
 
 A copy of the license is available in the repository's [license.txt]( https://raw.github.com/Esri/mapkit-2-arcgis/master/license.txt) file.
 
-[](Esri Tags: iOS MapKit 2 ArcGIS)
+[](Esri Tags: iOS MapKit 2 ArcGIS Runtime)
 [](Esri Language: Objective-C)
