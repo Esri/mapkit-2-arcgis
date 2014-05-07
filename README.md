@@ -4,7 +4,7 @@ MapKit 2 ArcGIS
 
 This solution migrates MapKit to ArcGIS without code changes.
 
-The demo was developed for the iPhone using the ArcGIS Runtime SDK for iOS 10.2.2, xCode 5.1 (with Automatic Reference Counting) and iOS 6.1. 
+The demo was developed for the iPhone using the ArcGIS Runtime SDK for iOS 10.2.3, xCode 5.1 (with Automatic Reference Counting) and iOS 6.1. 
 
 
 

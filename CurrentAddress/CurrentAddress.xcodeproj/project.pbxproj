@@ -40,7 +40,6 @@
 		E2C23E3E16D6F60900274FDA /* MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E2616D6F60900274FDA /* MKAnnotationView.m */; };
 		E2C23E3F16D6F60900274FDA /* MKGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E2A16D6F60900274FDA /* MKGeometry.m */; };
 		E2C23E4016D6F60900274FDA /* MKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E2C16D6F60900274FDA /* MKMapView.m */; };
-		E2C23E4116D6F60900274FDA /* MKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E2E16D6F60900274FDA /* MKOverlay.m */; };
 		E2C23E4216D6F60900274FDA /* MKOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E3016D6F60900274FDA /* MKOverlayView.m */; };
 		E2C23E4316D6F60900274FDA /* MKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E3216D6F60900274FDA /* MKPinAnnotationView.m */; };
 		E2C23E4416D6F60900274FDA /* MKPlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C23E3416D6F60900274FDA /* MKPlaceMark.m */; };
@@ -101,7 +100,6 @@
 		E2C23E2B16D6F60900274FDA /* MKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
 		E2C23E2C16D6F60900274FDA /* MKMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapView.m; sourceTree = "<group>"; };
 		E2C23E2D16D6F60900274FDA /* MKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlay.h; sourceTree = "<group>"; };
-		E2C23E2E16D6F60900274FDA /* MKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlay.m; sourceTree = "<group>"; };
 		E2C23E2F16D6F60900274FDA /* MKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKOverlayView.h; sourceTree = "<group>"; };
 		E2C23E3016D6F60900274FDA /* MKOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKOverlayView.m; sourceTree = "<group>"; };
 		E2C23E3116D6F60900274FDA /* MKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPinAnnotationView.h; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 				E2C23E2B16D6F60900274FDA /* MKMapView.h */,
 				E2C23E2C16D6F60900274FDA /* MKMapView.m */,
 				E2C23E2D16D6F60900274FDA /* MKOverlay.h */,
-				E2C23E2E16D6F60900274FDA /* MKOverlay.m */,
 				E2C23E2F16D6F60900274FDA /* MKOverlayView.h */,
 				E2C23E3016D6F60900274FDA /* MKOverlayView.m */,
 				E2C23E3116D6F60900274FDA /* MKPinAnnotationView.h */,
@@ -344,7 +341,6 @@
 				E2C23E3E16D6F60900274FDA /* MKAnnotationView.m in Sources */,
 				E2C23E3F16D6F60900274FDA /* MKGeometry.m in Sources */,
 				E2C23E4016D6F60900274FDA /* MKMapView.m in Sources */,
-				E2C23E4116D6F60900274FDA /* MKOverlay.m in Sources */,
 				E2C23E4216D6F60900274FDA /* MKOverlayView.m in Sources */,
 				E2C23E4316D6F60900274FDA /* MKPinAnnotationView.m in Sources */,
 				E2C23E4416D6F60900274FDA /* MKPlaceMark.m in Sources */,
@@ -378,7 +374,7 @@
 				GCC_PREFIX_HEADER = CurrentAddress_Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "CurrentAddress-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -399,7 +395,7 @@
 				GCC_PREFIX_HEADER = CurrentAddress_Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "CurrentAddress-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -431,7 +427,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -458,7 +454,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 			};
