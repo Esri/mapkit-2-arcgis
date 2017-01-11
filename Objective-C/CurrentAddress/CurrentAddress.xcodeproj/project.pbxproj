@@ -245,7 +245,7 @@
 				E2C23E3916D6F60900274FDA /* Resources */,
 			);
 			name = MapKit;
-			path = ../MapKit;
+			path = "../../MapKit-Objective-C";
 			sourceTree = "<group>";
 		};
 		E2C23E3916D6F60900274FDA /* Resources */ = {
