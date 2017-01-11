@@ -223,7 +223,7 @@
 				887F76301683893D009D58BA /* Resources */,
 			);
 			name = MapKit;
-			path = "MapKit-Objective-c";
+			path = "../MapKit-Objective-C";
 			sourceTree = "<group>";
 		};
 		887F76301683893D009D58BA /* Resources */ = {
