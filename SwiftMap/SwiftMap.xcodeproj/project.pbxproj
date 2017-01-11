@@ -14,6 +14,7 @@
 		88531CC41E255B2E00240DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88531CC21E255B2E00240DEC /* LaunchScreen.storyboard */; };
 		88531CD31E25604C00240DEC /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88531CD21E25604C00240DEC /* MKMapView.swift */; };
 		88531CD51E2574DE00240DEC /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88531CD41E2574DE00240DEC /* ArcGIS.bundle */; };
+		88531CDB1E26DA7500240DEC /* AGSMKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88531CDA1E26DA7500240DEC /* AGSMKMapViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		88531CC51E255B2E00240DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88531CD21E25604C00240DEC /* MKMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MKMapView.swift; path = ../../MapKit/MKMapView.swift; sourceTree = "<group>"; };
 		88531CD41E2574DE00240DEC /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = ../../../../../Users/albe5259/Library/SDKs/ArcGIS/iOS/Frameworks/Static/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<group>"; };
+		88531CDA1E26DA7500240DEC /* AGSMKMapViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AGSMKMapViewDelegate.swift; path = ../../MapKit/AGSMKMapViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				88531CD21E25604C00240DEC /* MKMapView.swift */,
+				88531CDA1E26DA7500240DEC /* AGSMKMapViewDelegate.swift */,
 			);
 			name = MapKit;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88531CDB1E26DA7500240DEC /* AGSMKMapViewDelegate.swift in Sources */,
 				88531CD31E25604C00240DEC /* MKMapView.swift in Sources */,
 				88531CBC1E255B2E00240DEC /* ViewController.swift in Sources */,
 				88531CBA1E255B2E00240DEC /* AppDelegate.swift in Sources */,

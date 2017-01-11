@@ -10,16 +10,19 @@ import UIKit
 import ArcGIS
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AGSMKMapViewDelegate {
 
     @IBOutlet weak var mapView: AGSMKMapView!
+    var geocoder: CLGeocoder?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //print(mapView?)
+        guard let mapView = mapView else {
+            return
+        }
         
-        mapView!.mapType = .standard
+        mapView.mapType = .standard
         var region = MKCoordinateRegion()
         
         region.center.latitude = 40.105085
@@ -27,7 +30,11 @@ class ViewController: UIViewController {
         region.span.latitudeDelta = 36
         region.span.longitudeDelta = 36
         
-        mapView!.region = region
+        mapView.region = region
+        mapView.showsUserLocation = true
+        
+        geocoder = CLGeocoder()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,5 +43,11 @@ class ViewController: UIViewController {
     }
 
 
+    func mapView(_ mapView: AGSMKMapView, didUpdate userLocation: MKUserLocation) {
+        geocoder?.reverseGeocodeLocation(mapView.userLocation!.location!, completionHandler: { placemark, error in
+            // TODO placemark
+            print(placemark?.count ?? 0)
+        })
+    }
 }
 

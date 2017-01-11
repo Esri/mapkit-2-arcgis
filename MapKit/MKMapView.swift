@@ -41,5 +41,28 @@ class AGSMKMapView: AGSMapView, MKMapViewDelegate {
         }
     }
     
+    private var showUserLoationSaved = false
+    var showsUserLocation: Bool? {
+        set {
+            if let newValue = newValue {
+                showUserLoationSaved = newValue
+                locationDisplay.showLocation = newValue
+                locationDisplay.showAccuracy = newValue
+                locationDisplay.showPingAnimationSymbol = newValue
+                if newValue && locationDisplay.started == false {
+                    locationDisplay.start(completion: { error in
+                        if error != nil {
+                            print("ERROR: \(error.debugDescription)")
+                        }
+                    })
+                } else {
+                    locationDisplay.stop()
+                }
+            }
+        } get {
+            return showUserLoationSaved
+        }
+    }
     
+    var userLocation: MKUserLocation?
 }
