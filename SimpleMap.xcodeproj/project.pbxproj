@@ -222,7 +222,8 @@
 				887F762F1683893D009D58BA /* MKUserTrackingMode.h */,
 				887F76301683893D009D58BA /* Resources */,
 			);
-			path = MapKit;
+			name = MapKit;
+			path = "MapKit-Objective-c";
 			sourceTree = "<group>";
 		};
 		887F76301683893D009D58BA /* Resources */ = {
