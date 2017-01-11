@@ -19,10 +19,12 @@ The demo was developed for the iPhone using the ArcGIS Runtime SDK for iOS 10.2.
 
 [New to Github? Get started here.](https://github.com/)
 
+The solution uses swift 3 instead of Objective-C, now the class name cannot be `MKMapView`. Developers will need to rename `MKMapView` to `AGSMKMapView` including the view class name in the storyboard. 
+
 ## Requirements
 
-* xCode 4 and above
-* A little background with iPhone development and Objective-C
+* xCode 8 and above
+* A little background with iPhone development and Swift
 * Experience with the [ArcGIS Runtime SDK for iOS](http://www.esri.com/) would help.
 
 ## Resources
@@ -40,7 +42,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 Anyone and everyone is welcome to contribute. We do accept pull requests.
 
 ## Licensing
-Copyright 2014 Esri
+Copyright 2017 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -57,4 +59,4 @@ limitations under the License.
 A copy of the license is available in the repository's [license.txt]( https://raw.github.com/Esri/mapkit-2-arcgis/master/license.txt) file.
 
 [](Esri Tags: iOS MapKit 2 ArcGIS Runtime)
-[](Esri Language: Objective-C)
+[](Esri Language: Swift)
