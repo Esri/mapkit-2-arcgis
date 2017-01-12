@@ -10,7 +10,7 @@ The old Objective-C version won't work with Xcode 8 and you'll have to downgrade
 
 ## Features
 
-* All the features for MapKit.
+* All the features for MapKit.*
 * All the features for ArcGIS
 
 ## Instructions
