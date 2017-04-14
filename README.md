@@ -58,5 +58,3 @@ limitations under the License.
 
 A copy of the license is available in the repository's [license.txt]( https://raw.github.com/Esri/mapkit-2-arcgis/master/license.txt) file.
 
-[](Esri Tags: iOS MapKit 2 ArcGIS Runtime)
-[](Esri Language: Swift)
